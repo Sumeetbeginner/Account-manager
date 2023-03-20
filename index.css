@@ -1,0 +1,237 @@
+
+body {
+  background: linear-gradient(to right, rgb(153, 45, 15), rgb(147, 106, 25));
+    margin: 0; 
+     height: 100%; 
+     width: 100%;
+
+  }
+
+  
+  
+
+  #homebackground{
+
+    position: absolute;
+    z-index: -99999;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, rgb(162, 68, 45), rgb(79, 59, 17));
+  }
+
+  #profilebackground{
+
+    position: absolute;
+    z-index: -999999;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, rgb(167, 38, 119), rgb(68, 16, 56));
+  }
+
+  #plusbackground{
+
+    position: absolute;
+    z-index: -999999;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, rgb(53, 56, 108), rgb(23, 13, 84));
+  }
+  #anabackground{
+
+    position: absolute;
+    z-index: -999999;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, rgb(126, 116, 29), rgb(92, 74, 10));
+  }
+
+  #walletbackground{
+
+    position: absolute;
+    z-index: -999999;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, rgb(59, 109, 56), rgb(11, 55, 17));
+  }
+  #img{
+
+    z-index: 9999999;
+  }
+
+ 
+  #container {
+    background-color: #212121;
+    width: 100%;
+    height: 75px;
+    position: absolute;
+    left: 50.2%;
+    top: 94.6%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    z-index: 99999999999999999;
+  }
+
+
+ 
+  #icon-1 {
+    transition-duration: 0.7s;
+    background-color: #f28c3c;
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+  }
+  #icon-2 {
+    background-color: #212121;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    position: absolute;
+    left: 32.5%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #icon-3 {
+
+ 
+    background-color: #212121;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #icon-4 {
+    background-color: #212121;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    position: absolute;
+    left: 67.5%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #icon-5 {
+    background-color: #212121;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    position: absolute;
+    left: 85%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #img {
+    font-size: 18px;
+    color: ghostwhite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  #activated {
+    background-color: #212121;
+    position: absolute;
+    left: 15%;
+    top: 20%;
+    transform: translate(-50%, -50%);
+    width: 115px;
+    height: 115px;
+    border-radius: 50%;
+  }
+
+
+  #addnew{
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    top:25%;
+   color: white;
+  }
+
+  
+  #wallet{
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    top:25%;
+   color: white;
+  }
+  
+
+  #wallet{
+    position: absolute;
+    width: 50%;
+    left: 25%;
+    top:25%;
+   color: white;
+  }
+   #analytics{
+
+
+      position: absolute;
+      width: 50%;
+      left: 25%;
+      top:25%;
+     color: white;
+    
+    
+   }
+
+
+
+   #balance2{
+
+    font-size: 50px;
+    position: absolute;
+    color: white;
+    background-color: #212121;
+    top: 5%;
+left: 19%;
+padding: 3% 15%;
+border-radius: 20px;
+
+left: 0; 
+right: 0; 
+margin-left: auto; 
+margin-right: auto; 
+width: 150px;
+   }
+
+   #balance1{
+color: white;
+    position: absolute;
+    left: 36%;
+    top: 3%;
+   }
+
+   #balance3{
+
+    position: absolute;
+    color: white;
+    top: 27%;
+    left: 4%;
+   }
+
+   #bal4{
+
+    position: absolute;
+    width: 15%;
+    top: 28%;
+    left: 56%;
+   }
+
+   #bal5{
+
+    position: absolute;
+    width: 16%;
+    top: 28%;
+    left: 77%;
+   }
+
+  
