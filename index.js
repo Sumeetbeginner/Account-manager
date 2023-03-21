@@ -3,6 +3,9 @@ let body = document.getElementById("body");
 let house = document.getElementById("icon-1");
 house.addEventListener("click", f_house);
 
+document.getElementById("name").innerHTML = localStorage.getItem("fullname");
+
+document.getElementById("usernamee").innerHTML = "@" + localStorage.getItem("username");
 function f_house() {
 
 profilebackground.style.display = "none";
@@ -226,14 +229,19 @@ walletbackground.style.display = "block";
   bell.style.transitionDuration = "0.7s";
 }
 
-
+document.getElementById("weeklylim").innerHTML = "₹" + localStorage.getItem("limit");
 
 var balance = [localStorage.getItem("balance")];
 
 function set(){
   balance[0] = 300;
 localStorage.setItem("balance", balance[0]);
+
 document.getElementById("balance2").innerHTML = "₹" + localStorage.getItem("balance");
+
+localStorage.setItem("limit", balance[0]);
+
+document.getElementById("weeklylim").innerHTML = "₹" + localStorage.getItem("limit");
 
 document.getElementById("bance2").innerHTML = "₹" + localStorage.getItem("balance");
 
@@ -245,7 +253,11 @@ function plus(){
 
   localStorage.setItem("balance", Number(localStorage.getItem("balance") ) + 20) ;
 
+  localStorage.setItem("limit", Number(localStorage.getItem("limit") ) + 20) ;
 
+
+  document.getElementById("moneyrem").innerHTML = "₹" + localStorage.getItem("balance");
+  document.getElementById("weeklylim").innerHTML = "₹" + localStorage.getItem("limit");
 document.getElementById("balance2").innerHTML = "₹" + localStorage.getItem("balance");
 
 document.getElementById("bance2").innerHTML = "₹" + localStorage.getItem("balance");
@@ -254,7 +266,9 @@ document.getElementById("bance2").innerHTML = "₹" + localStorage.getItem("bala
 function minus(){
   localStorage.setItem("balance", Number(localStorage.getItem("balance") ) - 20) ;
 
-
+  localStorage.setItem("limit", Number(localStorage.getItem("limit") ) - 20) ;
+  document.getElementById("weeklylim").innerHTML = "₹" + localStorage.getItem("limit");
+  document.getElementById("moneyrem").innerHTML = "₹" + localStorage.getItem("balance");
 
   document.getElementById("balance2").innerHTML = "₹" + localStorage.getItem("balance");
 
@@ -265,6 +279,7 @@ function minus(){
 
 var bhai = [];
 
+setInterval(function(){alert("Hello")},604800000);
 
 
 function login(){
@@ -281,6 +296,9 @@ document.getElementById("loginbox").style.display = "block";
 let data = []
 
 function submitdata(){
+
+
+
 document.getElementById("limitweek").style.display = "block";
 
   data[0]  = document.getElementById("user").value ;
@@ -318,11 +336,64 @@ function submitfinal(){
 
 bhai[0] = "true";
 localStorage.setItem("login", bhai[0]);
+
+location.reload();
 }
 
+let where = [];
+let spent = [];
+var i = [-1];
+
+function record(){
+
+  localStorage.setItem("balance", Number(localStorage.getItem("balance") ) -  document.getElementById("amount").value) ;
 
 
-  
+  localStorage.setItem("count", Number(localStorage.getItem("count") ) +1) ;
+
+  where[localStorage.getItem("count")] = document.getElementById("whyspent").value;
+  spent[localStorage.getItem("count")] = document.getElementById("amount").value;
+
+localStorage.setItem("where" + localStorage.getItem("count") ,  where[localStorage.getItem("count")] )
+
+localStorage.setItem("spent" + localStorage.getItem("count") ,  spent[localStorage.getItem("count")] )
+ 
+
+document.getElementById("amount").value = null;
+document.getElementById("whyspent").value = null;
+  // alert(localStorage.getItem("count"))
+  document.getElementById("balance2").innerHTML = "₹" + localStorage.getItem("balance");
+
+  document.getElementById("moneyrem").innerHTML = "₹" + localStorage.getItem("balance");
+}
+
+document.getElementById("moneyrem").innerHTML = "₹" + localStorage.getItem("balance");
+
+
+var xValues = ["Weekly Limit","Money Spent"];
+var yValues = [55, 49];
+var barColors = [
+  "green",
+  "red",
+ 
+];
+
+new Chart("myChart", {
+  type: "doughnut",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      // text: "World Wide Wine Production 2018"
+    }
+  }
+});
 
 
 
