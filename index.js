@@ -227,25 +227,111 @@ walletbackground.style.display = "block";
 }
 
 
-let balance = [300];
-document.getElementById("balance2").innerHTML = "₹" + balance[0];
-/*
-top = 10%
-w & h = 75px
-*/
+
+var balance = [localStorage.getItem("balance")];
+
+function set(){
+  balance[0] = 300;
+localStorage.setItem("balance", balance[0]);
+document.getElementById("balance2").innerHTML = "₹" + localStorage.getItem("balance");
+
+document.getElementById("bance2").innerHTML = "₹" + localStorage.getItem("balance");
+
+}
+
+
 
 function plus(){
 
-balance[0] = balance[0] + 50;
-document.getElementById("balance2").innerHTML = "₹" + balance[0];
+  localStorage.setItem("balance", Number(localStorage.getItem("balance") ) + 20) ;
+
+
+document.getElementById("balance2").innerHTML = "₹" + localStorage.getItem("balance");
+
+document.getElementById("bance2").innerHTML = "₹" + localStorage.getItem("balance");
 }
 
 function minus(){
+  localStorage.setItem("balance", Number(localStorage.getItem("balance") ) - 20) ;
 
-  balance[0] = balance[0] - 50;
-  document.getElementById("balance2").innerHTML = "₹" + balance[0];
+
+
+  document.getElementById("balance2").innerHTML = "₹" + localStorage.getItem("balance");
+
+  document.getElementById("bance2").innerHTML = "₹" + localStorage.getItem("balance");
   }
+
+  document.getElementById("balance2").innerHTML = "₹" + localStorage.getItem("balance");
+
+var bhai = [];
+
+
+
+function login(){
+
+  if(localStorage.getItem("login") != "true"){
+
+document.getElementById("login1").style.display = "block";
+
+document.getElementById("login").style.display = "block";
+
+document.getElementById("loginbox").style.display = "block";
+  }
+}
+let data = []
+
+function submitdata(){
+document.getElementById("limitweek").style.display = "block";
+
+  data[0]  = document.getElementById("user").value ;
+
+  localStorage.setItem("username", data[0] )
+
+  data[1]  = document.getElementById("pass").value ;
+
+  localStorage.setItem("password", data[1] )
   
+  data[2]  = document.getElementById("full").value ;
+
+  localStorage.setItem("fullname", data[2] )
+
+  data[3]  = document.getElementById("prof").value ;
+
+  localStorage.setItem("profession", data[3] )
+
+  document.getElementById("loginbox").style.display = "none";
+
+  weeklimit();
+
+}
+
+function weeklimit(){
+
+  set();
+  
+}
+
+function submitfinal(){
+
+  document.getElementById("login").style.display = "none";
+
+
+bhai[0] = "true";
+localStorage.setItem("login", bhai[0]);
+}
+
+
+
+  
+
+
+
+
+
+
+
+
+
   
 
 
