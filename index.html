@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>  
 </head> <link rel="stylesheet" href="index.css">
-<body>
+<body onload="login()">
   
 <script src="https://kit.fontawesome.com/a79f83ae93.js" crossorigin="anonymous"></script>
 
@@ -68,7 +68,7 @@
 </div>
 
 
-<div id="walletbackground">
+<div  id="walletbackground">
 
   <div id="balance">
     <h2 id="balance1">Balance </h2>
@@ -81,6 +81,58 @@
   </div>
 
 
+
+</div>
+
+
+<div id="login">
+
+  <div id="limitweek">
+
+
+
+      <h2 id="bance1">Enter Weekly Limit </h2>
+  
+  <h2 id="bance2"></h2>
+  
+ 
+  <img onclick="plus()" src="https://cdn-icons-png.flaticon.com/512/4315/4315609.png" alt="" id="ba4">
+  <img onclick="minus()" src="https://cdn-icons-png.flaticon.com/512/2569/2569198.png" alt="" id="ba5">
+
+  <input onclick="submitfinal()" id="submitn" type="submit" value="Submit">
+
+
+
+  </div>
+  
+
+
+
+    <div id="loginbox" class="login-box">
+   
+      <h1 id="cre">Create Account</h1>
+      <!-- <form> -->
+        <p>Username</p>
+        <input id="user" type="text" name="username" placeholder="Create Username" >
+        <p>Password</p>
+        <input id="pass" type="password" name="password" placeholder="Create Password" >
+        <p>Full Name</p>
+        <input id="full" type="text" name="username" placeholder="Enter Name" >
+        
+        <p>Profession</p>
+        <input id="prof" type="text" name="username" placeholder="Enter Profession" >
+
+
+     
+        <input onclick="submitdata()" type="submit" value="Submit">
+         
+      <!-- </form> -->
+
+    </div>
+<div id="login1">
+
+  
+</div>
 
 </div>
 
