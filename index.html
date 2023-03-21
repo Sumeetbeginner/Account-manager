@@ -20,7 +20,7 @@
     </div>
 
     <div id="icon-2">
-      <i id="img" class="fa-solid fa-user"></i>
+      <img src="group.png" alt="" id="addnew">
     </div>
 
     <div id="icon-3">
@@ -39,7 +39,20 @@
 </div>
 <div id="homebackground">
 
+  <img src="avatar (1).svg" alt="" id="avatar">
 
+<h2 id="name"></h2>
+<h3 id="usernamee"></h3>
+
+<h3 id="mr1">Money Left</h3>
+<h2 id="moneyrem"></h2>
+
+<h3 id="wl1">Weekly Limit</h3>
+<h2 id="weeklylim"></h2>
+
+<!-- <h2 id="balance3">Weekly Limit </h2> -->
+<img onclick="plus()" src="https://cdn-icons-png.flaticon.com/512/4315/4315609.png" alt="" id="bal4">
+<img onclick="minus()" src="https://cdn-icons-png.flaticon.com/512/2569/2569198.png" alt="" id="bal5">
 
 </div>
 
@@ -56,13 +69,29 @@
 
 <div id="plusbackground">
 
+<input placeholder="Where you Spent?" type="text" id="whyspent" required>
+
+<input placeholder="Amount ₹" min="1"  max="10000000000" type="number" id="amount" required>
+
+<button onclick="record()" id="submitamt">Submit</button>
+
+
+
+
+
+
+
+
+
+
+
 
 
 </div>
 
 
 <div id="anabackground">
-
+  <canvas id="myChart"></canvas>
 
 
 </div>
@@ -75,9 +104,19 @@
 
 <h2 id="balance2"></h2>
 
-<h2 id="balance3">Weekly Limit </h2>
-<img onclick="plus()" src="https://cdn-icons-png.flaticon.com/512/4315/4315609.png" alt="" id="bal4">
-<img onclick="minus()" src="https://cdn-icons-png.flaticon.com/512/2569/2569198.png" alt="" id="bal5">
+
+
+
+
+  
+
+</div>
+
+
+
+
+
+
   </div>
 
 
@@ -113,14 +152,14 @@
       <h1 id="cre">Create Account</h1>
       <!-- <form> -->
         <p>Username</p>
-        <input id="user" type="text" name="username" placeholder="Create Username" >
+        <input id="user" type="text" name="username" placeholder="Create Username" required>
         <p>Password</p>
-        <input id="pass" type="password" name="password" placeholder="Create Password" >
+        <input id="pass" type="password" name="password" placeholder="Create Password" required >
         <p>Full Name</p>
-        <input id="full" type="text" name="username" placeholder="Enter Name" >
+        <input id="full" type="text" name="username" placeholder="Enter Name" required >
         
         <p>Profession</p>
-        <input id="prof" type="text" name="username" placeholder="Enter Profession" >
+        <input id="prof" type="text" name="username" placeholder="Enter Profession" required >
 
 
      
@@ -135,7 +174,7 @@
 </div>
 
 </div>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>"></script>
   <script src="index.js"></script>
 </body>
 </html>
