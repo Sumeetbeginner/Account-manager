@@ -247,7 +247,7 @@ function f_bell() {
   }
 
   
-else if(localStorage.getItem("balance")/localStorage.getItem("limit")*100 >50 && localStorage.getItem("balance")/localStorage.getItem("limit")*100 <=99
+else if(localStorage.getItem("balance")/localStorage.getItem("limit")*100 >=50 && localStorage.getItem("balance")/localStorage.getItem("limit")*100 <=99
 ){
 
   document.getElementById("balance2").style.backgroundColor = "#1d8d15";
