@@ -1,13 +1,12 @@
 
 body {
-  background: linear-gradient(to right, rgb(153, 45, 15), rgb(147, 106, 25));
+  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(40, 49, 79) 70.2%);
     margin: 0; 
      height: 100%; 
      width: 100%;
 
   }
 
-  
   
 
   #homebackground{
@@ -61,12 +60,13 @@ body {
 
  
   #container {
+    position: fixed;
     background-color: #212121;
     width: 100%;
     height: 75px;
-    position: absolute;
+    /* position: absolute; */
     left: 50.2%;
-    top: 94.6%;
+    top: 95%;
     transform: translate(-50%, -50%);
     border-radius: 25px;
     z-index: 99999999999999999;
@@ -191,7 +191,7 @@ body {
     font-size: 50px;
     position: absolute;
     color: white;
-    background-color: #212121;
+    background-color: #e01c1c;
     top: 5%;
 left: 19%;
 padding: 3% 15%;
@@ -223,15 +223,15 @@ color: white;
 
     position: absolute;
     width: 11%;
-    top: 51%;
-    left: 61%;
+    top: 27.8%;
+    left: 58%;
    }
 
    #bal5{
 
     position: absolute;
     width: 12%;
-    top: 50.8%;
+    top: 27.6%;
     left: 78%;
    }
 
@@ -244,7 +244,12 @@ color: white;
     height: 100%;
     background: linear-gradient(to right, rgb(102, 54, 41), rgb(119, 88, 20));
    }
-  
+  #used{
+
+    position: absolute;
+    top: 23%;
+    left: 6.5%;
+  }
  
    #login1{
 display: none;
@@ -376,6 +381,12 @@ display: none;
      color: white;
    }
 
+   #myChart{
+
+
+   position: absolute;
+   }
+
 
    #bance2{
 
@@ -478,7 +489,7 @@ color: white;
     height: 6%;
     left: 11%;
     border-radius: 20px;
-    background: #fb2525;
+    background: #a3a328;
     color: #fff;
     font-size: 20px;
    }
@@ -557,7 +568,60 @@ font-size: 17px;
   border-radius: 10px;
 }
 
+#weeklylim2{
+
+  color: white;
+  position: absolute;
+  top: 23%;
+  background-color: #64924d;
+  padding: 3% 9%;
+  left:10%;
+  font-size: 30px;
+  border-radius: 10px;
+}
+#mirr1{
+
+  display: none;
+}
 #moneyrem{
+
+  color: white;
+  position: absolute;
+  top: 38%;
+  background-color: #d42a13;
+  padding: 3% 9%;
+  left:10%;
+  border-radius: 10px;
+  font-size: 30px;
+}
+
+#dc{
+
+  color: rgb(239, 30, 30);
+  position: absolute;
+left: 0;
+  right: 0; 
+margin-left: auto; 
+margin-right: auto; 
+text-align: center;
+top: 40%;
+display: none;
+
+}
+#resetbtn{
+
+position: absolute;
+background-color: rgb(232, 40, 40);
+  width: 37%;
+  top: 42.5%;
+  height: 6%;
+  left: 55%;
+  border-radius: 20px;
+  color: white;
+  font-size: 20px;
+}
+
+#moneyrem2{
 
   color: white;
   position: absolute;
@@ -586,4 +650,321 @@ font-size: 17px;
 #myChart{
 position: absolute;
  width: 50%;
+}
+
+#sett{
+
+  width: 12%;
+  position: absolute;
+  left: 84%;
+  top: 2%;
+}
+#setting{
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+ 
+  z-index: 9999999999999999999;
+  left: 0%;
+  top: 0%;
+
+  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(40, 49, 79) 70.2%);
+  background-attachment: fixed;
+}
+
+#homee{
+
+  position: absolute;
+  width:12%;
+  left: 80%;
+  top: 3.5%;
+}
+
+#searchsett{
+
+  position: absolute;
+  width: 65%;
+  height: 6%;
+border-radius: 20px;
+font-size: 20px;
+top: 3.8%;
+left: 4.5%;
+}
+
+#searchh{
+
+  position: absolute;
+  z-index: 9999999;
+  width: 8%;
+  left: 60%;
+  top: 5%;
+}
+
+#mirror{
+
+  position: absolute;
+  top: 15%;
+  width: 94%;
+  height: 9%;
+  background-color: rgb(83, 76, 76);
+  left: 3%;
+  border-radius: 10px;
+  opacity: 0.4;
+}
+
+#mirror1{
+
+  position: absolute;
+  top: 26%;
+  width: 94%;
+  height: 9%;
+  background-color: rgb(83, 76, 76);
+  left: 3%;
+  border-radius: 10px;
+  opacity: 0.4;
+}
+
+#mirror2{
+
+  position: absolute;
+  top: 37%;
+  width: 94%;
+  height: 9%;
+  background-color: rgb(83, 76, 76);
+  left: 3%;
+  border-radius: 10px;
+  opacity: 0.4;
+}
+
+#mirror3{
+
+  position: absolute;
+  top: 48%;
+  width: 94%;
+  height: 9%;
+  background-color: rgb(83, 76, 76);
+  left: 3%;
+  border-radius: 10px;
+  opacity: 0.4;
+}
+
+#mirror4{
+
+  position: absolute;
+  top: 59%;
+  width: 94%;
+  height: 9%;
+  background-color: rgb(83, 76, 76);
+  left: 3%;
+  border-radius: 10px;
+  opacity: 0.4;
+}
+#mirror5{
+
+  position: absolute;
+  top: 70%;
+  width: 94%;
+  height: 9%;
+  background-color: rgb(83, 76, 76);
+  left: 3%;
+  border-radius: 10px;
+  opacity: 0.4;
+}
+
+#wlwl{
+
+  color: white;
+  top: 14.6%;
+  position: absolute;
+left: 9%;
+}
+
+#wlwl1{
+
+  color: white;
+  top: 25.6%;
+  position: absolute;
+left: 9%;
+}
+
+#wlwl2{
+
+  color: white;
+  top: 36.6%;
+  position: absolute;
+left: 9%;
+}
+
+#wlwl3{
+
+  color: white;
+  top: 47.6%;
+  position: absolute;
+left: 9%;
+}
+
+#wlwl4{
+
+  color: white;
+  top: 58.6%;
+  position: absolute;
+left: 9%;
+}
+
+
+#wlwl5{
+
+  color: white;
+  top: 69.6%;
+  position: absolute;
+left: 9%;
+}
+
+
+#nextpng{
+
+  position: absolute;
+  top: 17.8%;
+  width: 7%;
+  left: 85%;
+}
+
+#nextpng1{
+
+  position: absolute;
+  top: 28.8%;
+  width: 7%;
+  left: 85%;
+}
+
+#nextpng22{
+
+  position: absolute;
+  top: 28.8%;
+  width: 7%;
+  left: 85%;
+}
+
+
+#nextpng11{
+
+  position: absolute;
+  top: 17.8%;
+  width: 7%;
+  left: 85%;
+}
+
+
+
+#nextpng2{
+
+  position: absolute;
+  top: 39.8%;
+  width: 7%;
+  left: 85%;
+}
+
+#nextpng33{
+
+  position: absolute;
+  top: 39.8%;
+  width: 7%;
+  left: 85%;
+}
+
+#nextpng3{
+
+  position: absolute;
+  top: 50.8%;
+  width: 7%;
+  left: 85%;
+}
+
+
+#nextpng44{
+
+  position: absolute;
+  top: 50.8%;
+  width: 7%;
+  left: 85%;
+}
+#nextpng4{
+
+  position: absolute;
+  top: 61.8%;
+  width: 7%;
+  left: 85%;
+}
+
+
+#nextpng55{
+
+  position: absolute;
+  top: 61.8%;
+  width: 7%;
+  left: 85%;
+}
+
+#nextpng5{
+
+  position: absolute;
+  top: 72.8%;
+  width: 7%;
+  left: 85%;
+}
+
+
+#nextpng66{
+
+  position: absolute;
+  top: 72.8%;
+  width: 7%;
+  left: 85%;
+}
+
+.rot{
+
+transform: rotate(90deg);
+display: none;
+}
+
+#setting{
+
+  display: none;
+}
+
+#walletbackground{
+  color: white;
+}
+
+#historyt{
+
+  position: absolute;
+  top: 16%;
+  left: 12%;
+}
+#historyt2{
+left: 66%;
+
+  position: absolute;
+  top: 16.3%;
+  color: red;
+ 
+}
+#recentt{
+color: rgb(24, 166, 24);
+  left: 18%;
+  top: 2%;
+  position: absolute;
+}
+#backk{
+
+  border-radius: 20px;
+width: 80%;
+height: 43%;
+position: absolute;
+left: 10%;
+top: 34%;
+  background-color: #272428;
 }

@@ -144,6 +144,33 @@ star.addEventListener("click", f_star);
 
 function f_star() {
 
+var xValues = ["Limit Remaining","Money Spent"];
+var yValues = [localStorage.getItem("ana2"), localStorage.getItem("ana1") ];
+var barColors = [
+  "green",
+  "red",
+ 
+];
+
+new Chart("myChart", {
+  type: "doughnut",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+
+    responsive: true,
+    title: {
+      display: true,
+      // text: "World Wide Wine Production 2018"
+    }
+  }
+});
+
   
   homebackground.style.display = "none";
 plusbackground.style.display = "none";
@@ -188,7 +215,61 @@ let bell = document.getElementById("icon-5");
 bell.addEventListener("click", f_bell);
 
 function f_bell() {
+  var count =  localStorage.getItem("count");
+  var no = 1;
+  var nos = 11;
+  var jui, jui2 ;
+  
+  while(count>=2){
+  
+    jui = localStorage.getItem("where"+count);
+  
+    jui2 = localStorage.getItem("spent"+count);
+  if(nos>55 || no>5){
+    break;
+  }
+  // alert(jui);
+   document.getElementById("his" + no ).innerHTML = jui;
+   document.getElementById("his" + nos ).innerHTML = "-₹" + jui2;
+  
+  count = count - 2;
+  no++;
+  nos = nos + 11;
+  
+  
+  }
+  if(localStorage.getItem("balance")/localStorage.getItem("limit")*100 == 100){
 
+    document.getElementById("balance2").style.backgroundColor = "#1d8d15";
+    document.getElementById("used").innerHTML = "You have used 0% of your Limit"
+
+    document.getElementById("used").style.color = "#1d8d15"
+  }
+
+  
+else if(localStorage.getItem("balance")/localStorage.getItem("limit")*100 >50 && localStorage.getItem("balance")/localStorage.getItem("limit")*100 <=99
+){
+
+  document.getElementById("balance2").style.backgroundColor = "#1d8d15";
+    document.getElementById("used").innerHTML = "You have used "+ (100 - parseInt(localStorage.getItem("balance")/localStorage.getItem("limit")*100)) + "% of your Limit"
+
+    document.getElementById("used").style.color = "#1d8d15"
+  }
+  else if(localStorage.getItem("balance")/localStorage.getItem("limit")*100 <50 && localStorage.getItem("balance")/localStorage.getItem("limit")*100 >=20){
+    document.getElementById("balance2").style.backgroundColor = "#cf6c0f";
+  
+    document.getElementById("used").innerHTML = "You have used " +( 100 - parseInt(localStorage.getItem("balance")/localStorage.getItem("limit")*100)) + "% of your Limit"
+    document.getElementById("used").style.color = "#cf6c0f"
+    
+  }
+  else if(localStorage.getItem("balance")/localStorage.getItem("limit")*100 < 20){
+  
+    document.getElementById("balance2").style.backgroundColor = "red";
+  
+    document.getElementById("used").innerHTML = "You have used " +( 100 - (parseInt(localStorage.getItem("balance")/localStorage.getItem("limit")*100))) + "% of your Limit"
+
+    document.getElementById("used").style.color = "red"
+  }
   
   homebackground.style.display = "none";
 plusbackground.style.display = "none";
@@ -242,7 +323,7 @@ document.getElementById("balance2").innerHTML = "₹" + localStorage.getItem("ba
 localStorage.setItem("limit", balance[0]);
 
 document.getElementById("weeklylim").innerHTML = "₹" + localStorage.getItem("limit");
-
+document.getElementById("weeklylim2").innerHTML = "₹" + localStorage.getItem("limit");
 document.getElementById("bance2").innerHTML = "₹" + localStorage.getItem("balance");
 
 }
@@ -251,7 +332,11 @@ document.getElementById("bance2").innerHTML = "₹" + localStorage.getItem("bala
 
 function plus(){
 
-  localStorage.setItem("balance", Number(localStorage.getItem("balance") ) + 20) ;
+  // localStorage.setItem("balance", Number(localStorage.getItem("balance") ) + 20) ;
+  localStorage.setItem("ana1", localStorage.getItem("limit") - localStorage.getItem("balance") + 20);
+
+  localStorage.setItem("ana2", localStorage.getItem("limit") - localStorage.getItem("ana1") +20 );
+
 
   localStorage.setItem("limit", Number(localStorage.getItem("limit") ) + 20) ;
 
@@ -260,11 +345,13 @@ function plus(){
   document.getElementById("weeklylim").innerHTML = "₹" + localStorage.getItem("limit");
 document.getElementById("balance2").innerHTML = "₹" + localStorage.getItem("balance");
 
-document.getElementById("bance2").innerHTML = "₹" + localStorage.getItem("balance");
+document.getElementById("bance2").innerHTML = "₹" + localStorage.getItem("limit");
+
+document.getElementById("weeklylim2").innerHTML = "₹" + localStorage.getItem("limit");
 }
 
 function minus(){
-  localStorage.setItem("balance", Number(localStorage.getItem("balance") ) - 20) ;
+  // localStorage.setItem("balance", Number(localStorage.getItem("balance") ) - 20) ;
 
   localStorage.setItem("limit", Number(localStorage.getItem("limit") ) - 20) ;
   document.getElementById("weeklylim").innerHTML = "₹" + localStorage.getItem("limit");
@@ -272,10 +359,17 @@ function minus(){
 
   document.getElementById("balance2").innerHTML = "₹" + localStorage.getItem("balance");
 
-  document.getElementById("bance2").innerHTML = "₹" + localStorage.getItem("balance");
+  document.getElementById("bance2").innerHTML = "₹" + localStorage.getItem("limit");
+
+  document.getElementById("weeklylim2").innerHTML = "₹" + localStorage.getItem("limit");
+
+  localStorage.setItem("ana1", localStorage.getItem("limit") - localStorage.getItem("balance") );
+  localStorage.setItem("ana2", localStorage.getItem("limit") - localStorage.getItem("ana1") );
   }
 
   document.getElementById("balance2").innerHTML = "₹" + localStorage.getItem("balance");
+
+ 
 
 var bhai = [];
 
@@ -332,7 +426,7 @@ function weeklimit(){
 function submitfinal(){
 
   document.getElementById("login").style.display = "none";
-
+  localStorage.setItem("balance", localStorage.getItem("limit"));
 
 bhai[0] = "true";
 localStorage.setItem("login", bhai[0]);
@@ -343,12 +437,35 @@ location.reload();
 let where = [];
 let spent = [];
 var i = [-1];
+var data1 = [];
+var data2 = [];
+var data11 = [];
+var data22 = [];
 
 function record(){
 
+ 
+  setTimeout(function(){
+    document.getElementById("dc").style.display = "block"
+}, 0);
+
+setTimeout(function(){
+  document.getElementById("dc").style.display = "none"
+}, 1500);
+
   localStorage.setItem("balance", Number(localStorage.getItem("balance") ) -  document.getElementById("amount").value) ;
 
+  localStorage.setItem("ana1", localStorage.getItem("limit") - localStorage.getItem("balance") );
+  localStorage.setItem("ana2", localStorage.getItem("limit") - localStorage.getItem("ana1") );
 
+  data22[0] = localStorage.getItem("balance") - 
+   localStorage.getItem("limit");
+  localStorage.setItem("count", Number(localStorage.getItem("count") ) +1) ;
+
+   data1[0] = localStorage.getItem("limit") - localStorage.getItem("balance");
+
+  data2[0] = localStorage.getItem("balance") - 
+   localStorage.getItem("limit");
   localStorage.setItem("count", Number(localStorage.getItem("count") ) +1) ;
 
   where[localStorage.getItem("count")] = document.getElementById("whyspent").value;
@@ -365,46 +482,654 @@ document.getElementById("whyspent").value = null;
   document.getElementById("balance2").innerHTML = "₹" + localStorage.getItem("balance");
 
   document.getElementById("moneyrem").innerHTML = "₹" + localStorage.getItem("balance");
+
+  
+  document.getElementById("moneyrem2").innerHTML = "₹" + localStorage.getItem("balance");
+
+  // location.reload();
+
+
 }
 
 document.getElementById("moneyrem").innerHTML = "₹" + localStorage.getItem("balance");
 
 
-var xValues = ["Weekly Limit","Money Spent"];
-var yValues = [55, 49];
-var barColors = [
-  "green",
-  "red",
- 
-];
-
-new Chart("myChart", {
-  type: "doughnut",
-  data: {
-    labels: xValues,
-    datasets: [{
-      backgroundColor: barColors,
-      data: yValues
-    }]
-  },
-  options: {
-    title: {
-      display: true,
-      // text: "World Wide Wine Production 2018"
-    }
-  }
-});
 
 
 
+function next1(){
+
+
+  document.getElementById("mirr1").style.display = "block"
+
+  document.getElementById("mirror").style.display = "block";
+  document.getElementById("mirror1").style.display = "none";
+
+  document.getElementById("mirror2").style.display = "none";
+
+  document.getElementById("mirror3").style.display = "none";
+  
+  document.getElementById("mirror4").style.display = "none";
+
+  document.getElementById("mirror5").style.display = "none";
+
+
+  
+  document.getElementById("wlwl").style.display = "block";
+  document.getElementById("wlwl1").style.display = "none";
+  document.getElementById("wlwl2").style.display = "none";
+  document.getElementById("wlwl3").style.display = "none";
+  document.getElementById("wlwl4").style.display = "none";
+  document.getElementById("wlwl5").style.display = "none";
+
+
+  document.getElementById("nextpng").style.display = "none";
+  document.getElementById("nextpng1").style.display = "none";
+  document.getElementById("nextpng2").style.display = "none";
+  document.getElementById("nextpng3").style.display = "none";
+  document.getElementById("nextpng4").style.display = "none";
+  document.getElementById("nextpng5").style.display = "none";
+
+  document.getElementById("mirror").style.height = "40%"
+
+  document.getElementById("mirror1").style.height = "9%"
+
+  document.getElementById("mirror2").style.height = "9%"
+
+  document.getElementById("mirror3").style.height = "9%"
+
+  document.getElementById("mirror4").style.height = "9%"
+
+  document.getElementById("mirror5").style.height = "9%"
+
+document.getElementById("nextpng11").style.display = "block";
+
+document.getElementById("nextpng22").style.display = "none";
+
+document.getElementById("nextpng33").style.display = "none";
+
+document.getElementById("nextpng44").style.display = "none";
+
+document.getElementById("nextpng55").style.display = "none";
+
+document.getElementById("nextpng66").style.display = "none";
+
+  
+
+}
+
+function prev1(){
+
+  document.getElementById("mirr1").style.display = "none"
+
+  document.getElementById("mirror1").style.display = "block";
+  document.getElementById("mirror").style.display = "block";
+
+  document.getElementById("mirror2").style.display = "block";
+
+  document.getElementById("mirror3").style.display = "block";
+  
+  document.getElementById("mirror4").style.display = "block";
+
+  document.getElementById("mirror5").style.display = "block";
+  
+  document.getElementById("wlwl1").style.display = "block";
+  document.getElementById("wlwl").style.display = "block";
+  document.getElementById("wlwl2").style.display = "block";
+  document.getElementById("wlwl3").style.display = "block";
+  document.getElementById("wlwl4").style.display = "block";
+  document.getElementById("wlwl5").style.display = "block";
+
+
+  document.getElementById("nextpng").style.display = "block";
+  document.getElementById("nextpng1").style.display = "block";
+  document.getElementById("nextpng2").style.display = "block";
+  document.getElementById("nextpng3").style.display = "block";
+  document.getElementById("nextpng4").style.display = "block";
+  document.getElementById("nextpng5").style.display = "block";
+  document.getElementById("nextpng11").style.display = "none";
+
+  document.getElementById("nextpng").style.display = "block";
+  document.getElementById("mirror").style.height = "9%"
+
+
+}
+
+function next2(){
 
 
 
+  document.getElementById("mirror").style.display = "block";
+  document.getElementById("mirror1").style.display = "block";
+
+  document.getElementById("mirror2").style.display = "block";
+
+  document.getElementById("mirror3").style.display = "none";
+  
+  document.getElementById("mirror4").style.display = "none";
+
+  document.getElementById("mirror5").style.display = "none";
+
+
+  
+  document.getElementById("wlwl").style.display = "block";
+  document.getElementById("wlwl1").style.display = "block";
+  document.getElementById("wlwl2").style.display = "block";
+  document.getElementById("wlwl3").style.display = "none";
+  document.getElementById("wlwl4").style.display = "none";
+  document.getElementById("wlwl5").style.display = "none";
+
+
+  document.getElementById("nextpng").style.display = "block";
+  document.getElementById("nextpng1").style.display = "none";
+  document.getElementById("nextpng2").style.display = "none";
+  document.getElementById("nextpng3").style.display = "none";
+  document.getElementById("nextpng4").style.display = "none";
+  document.getElementById("nextpng5").style.display = "none";
+
+  document.getElementById("mirror").style.height = "9%"
+
+  document.getElementById("mirror1").style.height = "69%"
+
+  document.getElementById("mirror2").style.height = "9%"
+
+  document.getElementById("mirror3").style.height = "9%"
+
+  document.getElementById("mirror4").style.height = "9%"
+
+  document.getElementById("mirror5").style.height = "9%"
+
+
+document.getElementById("nextpng11").style.display = "none";
+
+document.getElementById("nextpng22").style.display = "block";
+
+document.getElementById("nextpng33").style.display = "none";
+
+document.getElementById("nextpng44").style.display = "none";
+
+document.getElementById("nextpng55").style.display = "none";
+
+document.getElementById("nextpng66").style.display = "none";
+
+
+
+  document.getElementById("mirror").style.display = "block";
+  document.getElementById("mirror1").style.display = "block";
+
+  document.getElementById("mirror2").style.display = "none";
+
+  document.getElementById("mirror3").style.display = "none";
+  
+  document.getElementById("mirror4").style.display = "none";
+
+  document.getElementById("mirror5").style.display = "none";
+
+
+  
+  document.getElementById("wlwl").style.display = "block";
+  document.getElementById("wlwl1").style.display = "block";
+  document.getElementById("wlwl2").style.display = "none";
+  document.getElementById("wlwl3").style.display = "none";
+  document.getElementById("wlwl4").style.display = "none";
+  document.getElementById("wlwl5").style.display = "none";
+
+
+//  
+  
+
+}
+
+function prev2(){
+  document.getElementById("mirror1").style.display = "block";
+  document.getElementById("mirror").style.display = "block";
+
+  document.getElementById("mirror2").style.display = "block";
+
+  document.getElementById("mirror3").style.display = "block";
+  
+  document.getElementById("mirror4").style.display = "block";
+
+  document.getElementById("mirror5").style.display = "block";
+  
+  document.getElementById("wlwl1").style.display = "block";
+  document.getElementById("wlwl").style.display = "block";
+  document.getElementById("wlwl2").style.display = "block";
+  document.getElementById("wlwl3").style.display = "block";
+  document.getElementById("wlwl4").style.display = "block";
+  document.getElementById("wlwl5").style.display = "block";
+
+
+  document.getElementById("nextpng").style.display = "block";
+  document.getElementById("nextpng1").style.display = "block";
+  document.getElementById("nextpng2").style.display = "block";
+  document.getElementById("nextpng3").style.display = "block";
+  document.getElementById("nextpng4").style.display = "block";
+  document.getElementById("nextpng5").style.display = "block";
+  document.getElementById("nextpng22").style.display = "none";
+
+
+  document.getElementById("mirror1").style.height = "9%"
+
+}
+
+function next3(){
+
+
+
+  document.getElementById("mirror").style.display = "block";
+  document.getElementById("mirror1").style.display = "block";
+
+  document.getElementById("mirror2").style.display = "block";
+
+  document.getElementById("mirror3").style.display = "none";
+  
+  document.getElementById("mirror4").style.display = "none";
+
+  document.getElementById("mirror5").style.display = "none";
+
+
+  
+  document.getElementById("wlwl").style.display = "block";
+  document.getElementById("wlwl1").style.display = "block";
+  document.getElementById("wlwl2").style.display = "block";
+  document.getElementById("wlwl3").style.display = "none";
+  document.getElementById("wlwl4").style.display = "none";
+  document.getElementById("wlwl5").style.display = "none";
+
+
+  document.getElementById("nextpng").style.display = "block";
+  document.getElementById("nextpng1").style.display = "block";
+  document.getElementById("nextpng2").style.display = "none";
+  document.getElementById("nextpng3").style.display = "none";
+  document.getElementById("nextpng4").style.display = "none";
+  document.getElementById("nextpng5").style.display = "none";
+
+  document.getElementById("mirror").style.height = "9%"
+
+  document.getElementById("mirror1").style.height = "9%"
+
+  document.getElementById("mirror2").style.height = "69%"
+
+  document.getElementById("mirror3").style.height = "9%"
+
+  document.getElementById("mirror4").style.height = "9%"
+
+  document.getElementById("mirror5").style.height = "9%"
+
+
+document.getElementById("nextpng11").style.display = "none";
+
+document.getElementById("nextpng22").style.display = "none";
+
+document.getElementById("nextpng33").style.display = "block";
+
+document.getElementById("nextpng44").style.display = "none";
+
+document.getElementById("nextpng55").style.display = "none";
+
+document.getElementById("nextpng66").style.display = "none";
 
 
 
   
 
+}
+
+function prev3(){
+  document.getElementById("mirror1").style.display = "block";
+  document.getElementById("mirror").style.display = "block";
+
+  document.getElementById("mirror2").style.display = "block";
+
+  document.getElementById("mirror3").style.display = "block";
+  
+  document.getElementById("mirror4").style.display = "block";
+
+  document.getElementById("mirror5").style.display = "block";
+  
+  document.getElementById("wlwl1").style.display = "block";
+  document.getElementById("wlwl").style.display = "block";
+  document.getElementById("wlwl2").style.display = "block";
+  document.getElementById("wlwl3").style.display = "block";
+  document.getElementById("wlwl4").style.display = "block";
+  document.getElementById("wlwl5").style.display = "block";
+
+
+  document.getElementById("nextpng").style.display = "block";
+  document.getElementById("nextpng1").style.display = "block";
+  document.getElementById("nextpng2").style.display = "block";
+  document.getElementById("nextpng3").style.display = "block";
+  document.getElementById("nextpng4").style.display = "block";
+  document.getElementById("nextpng5").style.display = "block";
+  document.getElementById("nextpng22").style.display = "none";
+  document.getElementById("nextpng33").style.display = "none";
+
+  document.getElementById("mirror2").style.height = "9%"
+
+}
+
+function next4(){
 
 
 
+  document.getElementById("mirror").style.display = "block";
+  document.getElementById("mirror1").style.display = "block";
+
+  document.getElementById("mirror2").style.display = "block";
+
+  document.getElementById("mirror3").style.display = "block";
+  
+  document.getElementById("mirror4").style.display = "none";
+
+  document.getElementById("mirror5").style.display = "none";
+
+
+  
+  document.getElementById("wlwl").style.display = "block";
+  document.getElementById("wlwl1").style.display = "block";
+  document.getElementById("wlwl2").style.display = "block";
+  document.getElementById("wlwl3").style.display = "block";
+  document.getElementById("wlwl4").style.display = "none";
+  document.getElementById("wlwl5").style.display = "none";
+
+
+  document.getElementById("nextpng").style.display = "block";
+  document.getElementById("nextpng1").style.display = "block";
+  document.getElementById("nextpng2").style.display = "block";
+  document.getElementById("nextpng3").style.display = "none";
+  document.getElementById("nextpng4").style.display = "none";
+  document.getElementById("nextpng5").style.display = "none";
+
+  document.getElementById("mirror").style.height = "9%"
+
+  document.getElementById("mirror1").style.height = "9%"
+
+  document.getElementById("mirror2").style.height = "9%"
+
+  document.getElementById("mirror3").style.height = "69%"
+
+  document.getElementById("mirror4").style.height = "9%"
+
+  document.getElementById("mirror5").style.height = "9%"
+
+
+document.getElementById("nextpng11").style.display = "none";
+
+document.getElementById("nextpng22").style.display = "none";
+
+document.getElementById("nextpng33").style.display = "none";
+
+document.getElementById("nextpng44").style.display = "block";
+
+document.getElementById("nextpng55").style.display = "none";
+
+document.getElementById("nextpng66").style.display = "none";
+
+
+
+  
+
+}
+
+function prev4(){
+  document.getElementById("mirror1").style.display = "block";
+  document.getElementById("mirror").style.display = "block";
+
+  document.getElementById("mirror2").style.display = "block";
+
+  document.getElementById("mirror3").style.display = "block";
+  
+  document.getElementById("mirror4").style.display = "block";
+
+  document.getElementById("mirror5").style.display = "block";
+  
+  document.getElementById("wlwl1").style.display = "block";
+  document.getElementById("wlwl").style.display = "block";
+  document.getElementById("wlwl2").style.display = "block";
+  document.getElementById("wlwl3").style.display = "block";
+  document.getElementById("wlwl4").style.display = "block";
+  document.getElementById("wlwl5").style.display = "block";
+
+
+  document.getElementById("nextpng").style.display = "block";
+  document.getElementById("nextpng1").style.display = "block";
+  document.getElementById("nextpng2").style.display = "block";
+  document.getElementById("nextpng3").style.display = "block";
+  document.getElementById("nextpng4").style.display = "block";
+  document.getElementById("nextpng5").style.display = "block";
+  document.getElementById("nextpng22").style.display = "none";
+  document.getElementById("nextpng33").style.display = "none";
+  document.getElementById("nextpng44").style.display = "none";
+
+  document.getElementById("mirror3").style.height = "9%"
+
+}
+
+function next5(){
+
+
+
+  document.getElementById("mirror").style.display = "block";
+  document.getElementById("mirror1").style.display = "block";
+
+  document.getElementById("mirror2").style.display = "block";
+
+  document.getElementById("mirror3").style.display = "block";
+  
+  document.getElementById("mirror4").style.display = "block";
+
+  document.getElementById("mirror5").style.display = "none";
+
+
+  
+  document.getElementById("wlwl").style.display = "block";
+  document.getElementById("wlwl1").style.display = "block";
+  document.getElementById("wlwl2").style.display = "block";
+  document.getElementById("wlwl3").style.display = "block";
+  document.getElementById("wlwl4").style.display = "block";
+  document.getElementById("wlwl5").style.display = "none";
+
+
+  document.getElementById("nextpng").style.display = "block";
+  document.getElementById("nextpng1").style.display = "block";
+  document.getElementById("nextpng2").style.display = "block";
+  document.getElementById("nextpng3").style.display = "block";
+  document.getElementById("nextpng4").style.display = "none";
+  document.getElementById("nextpng5").style.display = "none";
+
+  document.getElementById("mirror").style.height = "9%"
+
+  document.getElementById("mirror1").style.height = "9%"
+
+  document.getElementById("mirror2").style.height = "9%"
+
+  document.getElementById("mirror3").style.height = "9%"
+
+  document.getElementById("mirror4").style.height = "69%"
+
+  document.getElementById("mirror5").style.height = "9%"
+
+
+document.getElementById("nextpng11").style.display = "none";
+
+document.getElementById("nextpng22").style.display = "none";
+
+document.getElementById("nextpng33").style.display = "none";
+
+document.getElementById("nextpng44").style.display = "none";
+
+document.getElementById("nextpng55").style.display = "block";
+
+document.getElementById("nextpng66").style.display = "none";
+
+
+
+  
+
+}
+
+function prev5(){
+  document.getElementById("mirror1").style.display = "block";
+  document.getElementById("mirror").style.display = "block";
+
+  document.getElementById("mirror2").style.display = "block";
+
+  document.getElementById("mirror3").style.display = "block";
+  
+  document.getElementById("mirror4").style.display = "block";
+
+  document.getElementById("mirror5").style.display = "block";
+  
+  document.getElementById("wlwl1").style.display = "block";
+  document.getElementById("wlwl").style.display = "block";
+  document.getElementById("wlwl2").style.display = "block";
+  document.getElementById("wlwl3").style.display = "block";
+  document.getElementById("wlwl4").style.display = "block";
+  document.getElementById("wlwl5").style.display = "block";
+
+
+  document.getElementById("nextpng").style.display = "block";
+  document.getElementById("nextpng1").style.display = "block";
+  document.getElementById("nextpng2").style.display = "block";
+  document.getElementById("nextpng3").style.display = "block";
+  document.getElementById("nextpng4").style.display = "block";
+  document.getElementById("nextpng5").style.display = "block";
+  document.getElementById("nextpng22").style.display = "none";
+  document.getElementById("nextpng33").style.display = "none";
+  document.getElementById("nextpng44").style.display = "none";
+  document.getElementById("nextpng55").style.display = "none";
+  document.getElementById("mirror4").style.height = "9%"
+
+}
+
+function next6(){
+
+
+
+  document.getElementById("mirror").style.display = "block";
+  document.getElementById("mirror1").style.display = "block";
+
+  document.getElementById("mirror2").style.display = "block";
+
+  document.getElementById("mirror3").style.display = "block";
+  
+  document.getElementById("mirror4").style.display = "block";
+
+  document.getElementById("mirror5").style.display = "block";
+
+
+  
+  document.getElementById("wlwl").style.display = "block";
+  document.getElementById("wlwl1").style.display = "block";
+  document.getElementById("wlwl2").style.display = "block";
+  document.getElementById("wlwl3").style.display = "block";
+  document.getElementById("wlwl4").style.display = "block";
+  document.getElementById("wlwl5").style.display = "block";
+
+
+  document.getElementById("nextpng").style.display = "block";
+  document.getElementById("nextpng1").style.display = "block";
+  document.getElementById("nextpng2").style.display = "block";
+  document.getElementById("nextpng3").style.display = "block";
+  document.getElementById("nextpng4").style.display = "block";
+  document.getElementById("nextpng5").style.display = "none";
+
+  document.getElementById("mirror").style.height = "9%"
+
+  document.getElementById("mirror1").style.height = "9%"
+
+  document.getElementById("mirror2").style.height = "9%"
+
+  document.getElementById("mirror3").style.height = "9%"
+
+  document.getElementById("mirror4").style.height = "9%"
+
+  document.getElementById("mirror5").style.height = "69%"
+
+
+document.getElementById("nextpng11").style.display = "none";
+
+document.getElementById("nextpng22").style.display = "none";
+
+document.getElementById("nextpng33").style.display = "none";
+
+document.getElementById("nextpng44").style.display = "none";
+
+document.getElementById("nextpng55").style.display = "none";
+
+document.getElementById("nextpng66").style.display = "block";
+
+
+
+  
+
+}
+
+function prev6(){
+  document.getElementById("mirror1").style.display = "block";
+  document.getElementById("mirror").style.display = "block";
+
+  document.getElementById("mirror2").style.display = "block";
+
+  document.getElementById("mirror3").style.display = "block";
+  
+  document.getElementById("mirror4").style.display = "block";
+
+  document.getElementById("mirror5").style.display = "block";
+  
+  document.getElementById("wlwl1").style.display = "block";
+  document.getElementById("wlwl").style.display = "block";
+  document.getElementById("wlwl2").style.display = "block";
+  document.getElementById("wlwl3").style.display = "block";
+  document.getElementById("wlwl4").style.display = "block";
+  document.getElementById("wlwl5").style.display = "block";
+
+
+  document.getElementById("nextpng").style.display = "block";
+  document.getElementById("nextpng1").style.display = "block";
+  document.getElementById("nextpng2").style.display = "block";
+  document.getElementById("nextpng3").style.display = "block";
+  document.getElementById("nextpng4").style.display = "block";
+  document.getElementById("nextpng5").style.display = "block";
+  document.getElementById("nextpng22").style.display = "none";
+  document.getElementById("nextpng33").style.display = "none";
+  document.getElementById("nextpng44").style.display = "none";
+  document.getElementById("nextpng55").style.display = "none";
+  document.getElementById("nextpng66").style.display = "none";
+  document.getElementById("mirror5").style.height = "9%"
+
+}
+
+
+function setti(){
+
+  document.getElementById("setting").style.display = "block";
+
+}
+function homie(){
+
+  document.getElementById("setting").style.display = "none";
+  // location.reload();
+}
+
+document.getElementById("weeklylim2").innerHTML = document.getElementById("weeklylim").innerHTML;
+
+function reset(){
+
+
+localStorage.setItem("balance", localStorage.getItem("limit"));
+
+document.getElementById("moneyrem2").innerHTML =  "₹" + localStorage.getItem("balance");
+
+document.getElementById("moneyrem").innerHTML =  "₹" + localStorage.getItem("balance");
+
+document.getElementById("balance2").innerHTML = "₹" + localStorage.getItem("balance");
+}
+
+document.getElementById("moneyrem2").innerHTML =  "₹" + localStorage.getItem("balance");
+
+function dataput(){
+  localStorage.setItem("ana1", localStorage.getItem("limit") - localStorage.getItem("balance") );
+ 
+}
