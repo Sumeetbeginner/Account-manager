@@ -247,7 +247,7 @@ function f_bell() {
   }
 
   
-else if(localStorage.getItem("balance")/localStorage.getItem("limit")*100 >=50 && localStorage.getItem("balance")/localStorage.getItem("limit")*100 <=99
+else if(localStorage.getItem("balance")/localStorage.getItem("limit")*100 >50 && localStorage.getItem("balance")/localStorage.getItem("limit")*100 <=99
 ){
 
   document.getElementById("balance2").style.backgroundColor = "#1d8d15";
@@ -326,7 +326,17 @@ document.getElementById("weeklylim").innerHTML = "₹" + localStorage.getItem("l
 document.getElementById("weeklylim2").innerHTML = "₹" + localStorage.getItem("limit");
 document.getElementById("bance2").innerHTML = "₹" + localStorage.getItem("balance");
 
+var datee = new Date();
+
+// ✅ Reset a Date's time to midnight
+datee.setHours(0, 0, 0, 0);
+localStorage.setItem("datenow", datee);
+localStorage.setItem("datecount", 1)
+document.getElementById("dayc").innerHTML = "Day " +"1";
 }
+
+
+
 
 
 
@@ -432,6 +442,12 @@ bhai[0] = "true";
 localStorage.setItem("login", bhai[0]);
 
 location.reload();
+
+
+// var date = Date();
+// localStorage.setItem("datec", date);
+// localStorage.setItem("daycount", 1);
+
 }
 
 let where = [];
@@ -1133,3 +1149,36 @@ function dataput(){
   localStorage.setItem("ana1", localStorage.getItem("limit") - localStorage.getItem("balance") );
  
 }
+
+var datte = new Date();
+
+// ✅ Reset a Date's time to midnight
+datte.setHours(0, 0, 0, 0);
+
+
+if(localStorage.getItem("datenow") != datte){
+
+
+  if(localStorage.getItem("datecount")>7){
+
+    localStorage.setItem("datecount", 1);
+  }
+  
+localStorage.setItem("datecount", Number(localStorage.getItem("datecount") )+ 1);
+
+document.getElementById("dayc").innerHTML = "Day " + localStorage.getItem("datecount");
+
+localStorage.setItem("datenow", Date());
+
+
+}
+
+else if(localStorage.getItem("datenow") == datte){
+
+  document.getElementById("dayc").innerHTML = "Day " + localStorage.getItem("datecount");
+  
+}
+
+
+
+
