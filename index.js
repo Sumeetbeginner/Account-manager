@@ -1159,9 +1159,9 @@ datte.setHours(0, 0, 0, 0);
 if(localStorage.getItem("datenow") != datte){
 
 
-  if(localStorage.getItem("datecount")>7){
+  if(localStorage.getItem("datecount")>=7){
 
-    localStorage.setItem("datecount", 1);
+    localStorage.setItem("datecount", 0);
   }
   
 localStorage.setItem("datecount", Number(localStorage.getItem("datecount") )+ 1);
