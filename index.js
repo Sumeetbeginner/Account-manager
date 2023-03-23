@@ -255,7 +255,7 @@ else if(localStorage.getItem("balance")/localStorage.getItem("limit")*100 >50 &&
 
     document.getElementById("used").style.color = "#1d8d15"
   }
-  else if(localStorage.getItem("balance")/localStorage.getItem("limit")*100 <50 && localStorage.getItem("balance")/localStorage.getItem("limit")*100 >=20){
+  else if(localStorage.getItem("balance")/localStorage.getItem("limit")*100 <=50 && localStorage.getItem("balance")/localStorage.getItem("limit")*100 >=20){
     document.getElementById("balance2").style.backgroundColor = "#cf6c0f";
   
     document.getElementById("used").innerHTML = "You have used " +( 100 - parseInt(localStorage.getItem("balance")/localStorage.getItem("limit")*100)) + "% of your Limit"
@@ -384,12 +384,18 @@ function minus(){
 var bhai = [];
 
 setInterval(function(){alert("Hello")},604800000);
+// var ava = ["ava2.png", "ava3.png", "ava3.png", "ava4.png",  "ava5.png", "ava6.png", "ava7.png", "ava8.png",  "ava9.png", "ava10.png", "ava11.png", "ava12.png",  "ava13.png", "ava14.png", "ava15.png", "ava1.png"]
+
 
 
 function login(){
 
-  if(localStorage.getItem("login") != "true"){
+  
+  // document.getElementById("avatar").src = ava[localStorage.getItem("avat")];
 
+  if(localStorage.getItem("login") != "true"){
+  
+  
 document.getElementById("login1").style.display = "block";
 
 document.getElementById("login").style.display = "block";
@@ -401,7 +407,14 @@ let data = []
 
 function submitdata(){
 
+  localStorage.setItem("av", 0);
 
+  document.getElementById("avatar").src = ava[localStorage.getItem("av")];
+
+
+  document.getElementById("avatarccc").src = ava[localStorage.getItem("av")];
+
+  document.getElementById("avatarcc").src = ava[localStorage.getItem("av")];
 
 document.getElementById("limitweek").style.display = "block";
 
@@ -434,6 +447,15 @@ function weeklimit(){
 }
 
 function submitfinal(){
+
+  document.getElementById("avatar").src = ava[localStorage.getItem("av")];
+
+
+
+
+  document.getElementById("avatarccc").src = ava[localStorage.getItem("av")];
+
+  document.getElementById("avatarcc").src = ava[localStorage.getItem("av")];
 
   document.getElementById("login").style.display = "none";
   localStorage.setItem("balance", localStorage.getItem("limit"));
@@ -613,7 +635,7 @@ function prev1(){
 
 function next2(){
 
-
+  document.getElementById("mirr2").style.display = "block";
 
   document.getElementById("mirror").style.display = "block";
   document.getElementById("mirror1").style.display = "block";
@@ -697,6 +719,9 @@ document.getElementById("nextpng66").style.display = "none";
 }
 
 function prev2(){
+
+  document.getElementById("mirr2").style.display = "none";
+
   document.getElementById("mirror1").style.display = "block";
   document.getElementById("mirror").style.display = "block";
 
@@ -1143,9 +1168,19 @@ function homie(){
 
   document.getElementById("setting").style.display = "none";
   // location.reload();
+  document.getElementById("avatar").src = ava[localStorage.getItem("av")];
+
+  document.getElementById("avatarcc").src = ava[localStorage.getItem("av")];
+  
+  document.getElementById("avatarccc").src = ava[localStorage.getItem("av")];
+  
+
+
 }
 
 document.getElementById("weeklylim2").innerHTML = document.getElementById("weeklylim").innerHTML;
+
+
 
 function reset(){
 
@@ -1163,7 +1198,7 @@ document.getElementById("moneyrem2").innerHTML =  "₹" + localStorage.getItem("
 
 function dataput(){
   localStorage.setItem("ana1", localStorage.getItem("limit") - localStorage.getItem("balance") );
- 
+
 }
 
 
@@ -1198,6 +1233,50 @@ else if(localStorage.getItem("datenow") == datte){
   document.getElementById("dayc").innerHTML = "Day " + localStorage.getItem("datecount");
   
 }
+
+
+var ava = ["ava2.png", "ava3.png", "ava4.png",  "ava5.png", "ava6.png", "ava7.png", "ava8.png",  "ava9.png", "ava10.png", "ava11.png", "ava12.png",  "ava13.png", "ava14.png", "ava15.png", "ava1.png"]
+
+
+
+
+
+
+
+function changeava(){
+
+ 
+  document.getElementById("avatarcc").src = ava[Number(localStorage.getItem("av"))+1];
+
+  document.getElementById("avatar").src = ava[ Number(localStorage.getItem("av"))+1];
+
+  document.getElementById("avatarccc").src = ava[Number(localStorage.getItem("av"))+1];
+
+
+  localStorage.setItem("av", Number(localStorage.getItem("av")) + 1 );
+
+  if(localStorage.getItem("av")>=15){
+
+ 
+    localStorage.setItem("av", 0);
+    document.getElementById("avatar").src = ava[localStorage.getItem("av")];
+
+document.getElementById("avatarcc").src = ava[localStorage.getItem("av")];
+
+document.getElementById("avatarccc").src = ava[localStorage.getItem("av")];
+  }
+
+
+
+}
+
+
+
+document.getElementById("avatar").src = ava[localStorage.getItem("av")];
+
+document.getElementById("avatarcc").src = ava[localStorage.getItem("av")];
+
+document.getElementById("avatarccc").src = ava[localStorage.getItem("av")];
 
 
 
