@@ -8,6 +8,7 @@ body {
   }
 
   
+  
 
   #homebackground{
 
@@ -605,7 +606,17 @@ font-size: 17px;
   border-radius: 10px;
   font-size: 30px;
 }
+#dayrem{
 
+  color: white;
+  position: absolute;
+  top: 52.5%;
+  background-color: #b27110;
+  padding: 3% 7%;
+  left:10%;
+  border-radius: 10px;
+  font-size: 30px;
+}
 #dc{
 
   color: rgb(239, 30, 30);
@@ -631,6 +642,20 @@ background-color: rgb(232, 40, 40);
   color: white;
   font-size: 20px;
 }
+
+#resetbtn1{
+
+  position: absolute;
+  background-color: rgb(232, 40, 40);
+    width: 37%;
+    top: 57.5%;
+    height: 6%;
+    left: 55%;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+  }
+  
 
 #moneyrem2{
 
@@ -868,6 +893,8 @@ left: 9%;
 
 
 
+
+
 #nextpng2{
 
   position: absolute;
@@ -979,3 +1006,10 @@ left: 10%;
 top: 34%;
   background-color: #272428;
 }
+
+#used{
+
+left: 7%;
+font-size: 20px;
+}
+

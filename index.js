@@ -546,7 +546,7 @@ function next1(){
   document.getElementById("nextpng4").style.display = "none";
   document.getElementById("nextpng5").style.display = "none";
 
-  document.getElementById("mirror").style.height = "40%"
+  document.getElementById("mirror").style.height = "54%"
 
   document.getElementById("mirror1").style.height = "9%"
 
@@ -789,6 +789,20 @@ document.getElementById("nextpng66").style.display = "none";
 
 
   
+
+}
+
+function resetday(){
+  var dateee = Date();
+
+
+  // ✅ Reset a Dateda's time to midnight
+  dateee.setHours(0, 0, 0, 0);
+
+
+  localStorage.setItem("datenow", dateee)
+
+localStorage.setItem("datecount", 1);
 
 }
 
@@ -1122,6 +1136,8 @@ function setti(){
 
   document.getElementById("setting").style.display = "block";
 
+  document.getElementById("dayrem").innerHTML = "Day "  + localStorage.getItem("datecount")
+
 }
 function homie(){
 
@@ -1150,10 +1166,14 @@ function dataput(){
  
 }
 
+
 var datte = new Date();
 
 // ✅ Reset a Date's time to midnight
 datte.setHours(0, 0, 0, 0);
+
+localStorage.setItem("datethen", datte);
+
 
 
 if(localStorage.getItem("datenow") != datte){
