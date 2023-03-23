@@ -1222,8 +1222,11 @@ if(localStorage.getItem("datenow") != datte){
 localStorage.setItem("datecount", Number(localStorage.getItem("datecount") )+ 1);
 
 document.getElementById("dayc").innerHTML = "Day " + localStorage.getItem("datecount");
+var ndatte = new Date();
 
-localStorage.setItem("datenow", Date());
+// ✅ Reset a Date's time to midnight
+ndatte.setHours(0, 0, 0, 0);
+localStorage.setItem("datenow", ndatte);
 
 
 }
