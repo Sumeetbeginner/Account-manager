@@ -1,514 +1,549 @@
-
 body {
   background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(40, 49, 79) 70.2%);
-    margin: 0; 
-     height: 100%; 
-     width: 100%;
+  margin: 0;
+  height: 100%;
+  width: 100%;
 
-  }
+}
 
-  
-  
+#homebackground {
 
-  #homebackground{
+  position: absolute;
+  z-index: -99999;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(40, 49, 79) 70.2%);
+}
 
-    position: absolute;
-    z-index: -99999;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(40, 49, 79) 70.2%);
-  }
-  
+#profilebackground {
 
-  #profilebackground{
+  position: absolute;
+  z-index: -999999;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(40, 49, 79) 70.2%);
+}
 
-    position: absolute;
-    z-index: -999999;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(40, 49, 79) 70.2%);
-  }
+#plusbackground {
 
-  #plusbackground{
+  position: absolute;
+  z-index: -999999;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(40, 49, 79) 70.2%);
+}
 
-    position: absolute;
-    z-index: -999999;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(40, 49, 79) 70.2%);
-  }
-  #anabackground{
+#anabackground {
 
-    position: absolute;
-    z-index: -999999;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(40, 49, 79) 70.2%);
-  }
+  position: absolute;
+  z-index: -999999;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(40, 49, 79) 70.2%);
+}
 
-  #walletbackground{
+#walletbackground {
 
-    position: absolute;
-    z-index: -999999;
-    width: 100%;
-    height: 100vh;
-    background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(40, 49, 79) 70.2%);
-  }
-  #img{
+  position: absolute;
+  z-index: -999999;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(40, 49, 79) 70.2%);
+}
 
-    z-index: 9999999;
-  }
+#img {
 
- 
-  #container {
-    position: fixed;
-    background-color: #212121;
-    width: 100%;
-    height: 75px;
-    /* position: absolute; */
-    left: 50.2%;
-    top: 95%;
-    transform: translate(-50%, -50%);
-    border-radius: 25px;
-    z-index: 99999999999999999;
-  }
+  z-index: 9999999;
+}
 
+#container {
+  position: fixed;
+  background-color: #212121;
+  width: 100%;
+  height: 75px;
+  /* position: absolute; */
+  left: 50.2%;
+  top: 95%;
+  transform: translate(-50%, -50%);
+  border-radius: 25px;
+  z-index: 99999999999999999;
+}
 
- 
-  #icon-1 {
-    transition-duration: 0.7s;
-    background-color: #f28c3c;
-    width: 75px;
-    height: 75px;
-    border-radius: 50px;
-    position: absolute;
-    left: 15%;
-    top: 10%;
-    transform: translate(-50%, -50%);
-  }
-  #icon-2 {
-    background-color: #212121;
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    position: absolute;
-    left: 32.5%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #icon-3 {
+#icon-1 {
+  transition-duration: 0.7s;
+  background-color: #f28c3c;
+  width: 75px;
+  height: 75px;
+  border-radius: 50px;
+  position: absolute;
+  left: 15%;
+  top: 10%;
+  transform: translate(-50%, -50%);
+}
 
- 
-    background-color: #212121;
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #icon-4 {
-    background-color: #212121;
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    position: absolute;
-    left: 67.5%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #icon-5 {
-    background-color: #212121;
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    position: absolute;
-    left: 85%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #img {
-    font-size: 18px;
-    color: ghostwhite;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #activated {
-    background-color: #212121;
-    position: absolute;
-    left: 15%;
-    top: 20%;
-    transform: translate(-50%, -50%);
-    width: 115px;
-    height: 115px;
-    border-radius: 50%;
-  }
+#icon-2 {
+  background-color: #212121;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  position: absolute;
+  left: 32.5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#icon-3 {
 
 
-  #addnew{
-    position: absolute;
-    width: 50%;
-    left: 25%;
-    top:25%;
-   color: white;
-  }
+  background-color: #212121;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
-  
-  #wallet{
-    position: absolute;
-    width: 50%;
-    left: 25%;
-    top:25%;
-   color: white;
-  }
-  
+#icon-4 {
+  background-color: #212121;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  position: absolute;
+  left: 67.5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
-  #wallet{
-    position: absolute;
-    width: 50%;
-    left: 25%;
-    top:25%;
-   color: white;
-  }
-   #analytics{
+#icon-5 {
+  background-color: #212121;
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  position: absolute;
+  left: 85%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#img {
+  font-size: 18px;
+  color: ghostwhite;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#activated {
+  background-color: #212121;
+  position: absolute;
+  left: 15%;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+}
+
+#addnew {
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  top: 25%;
+  color: white;
+}
+
+#wallet {
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  top: 25%;
+  color: white;
+}
+
+#wallet {
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  top: 25%;
+  color: white;
+}
+
+#analytics {
 
 
-      position: absolute;
-      width: 50%;
-      left: 25%;
-      top:25%;
-     color: white;
-    
-    
-   }
+  position: absolute;
+  width: 50%;
+  left: 25%;
+  top: 25%;
+  color: white;
 
 
+}
 
-   #balance2{
+#balance2 {
 
-    font-size: 50px;
-    position: absolute;
-    color: white;
-    background-color: #e01c1c;
-    top: 5%;
-left: 19%;
-padding: 3% 15%;
-border-radius: 20px;
+  font-size: 50px;
+  position: absolute;
+  color: white;
+  background-color: #e01c1c;
+  top: 5%;
+  left: 19%;
+  padding: 3% 15%;
+  border-radius: 20px;
 
-left: 0; 
-right: 0; 
-margin-left: auto; 
-margin-right: auto; 
-width: 150px;
-   }
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+}
 
-   #balance1{
-color: white;
-    position: absolute;
-    left: 36%;
-    top: 3%;
-   }
+#balance1 {
+  color: white;
+  position: absolute;
+  left: 36%;
+  top: 3%;
+}
 
-   #balance3{
+#balance3 {
 
-    position: absolute;
-    color: white;
-    top: 53%;
-    left: 5%;
-   }
+  position: absolute;
+  color: white;
+  top: 53%;
+  left: 5%;
+}
 
-   #bal4{
+#bal4 {
 
-    position: absolute;
-    width: 11%;
-    top: 27.8%;
-    left: 58%;
-   }
+  position: absolute;
+  width: 11%;
+  top: 27.8%;
+  left: 58%;
+}
 
-   #bal5{
+#bal5 {
 
-    position: absolute;
-    width: 12%;
-    top: 27.6%;
-    left: 78%;
-   }
+  position: absolute;
+  width: 12%;
+  top: 27.6%;
+  left: 78%;
+}
 
-   #login{
-    display: none;
-    position: absolute;
-    z-index: 999999999999999999999999999999;
+#login {
+  display: none;
+  position: absolute;
+  z-index: 999999999999999999999999999999;
 
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgb(102, 54, 41), rgb(119, 88, 20));
-   }
-  #used{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgb(102, 54, 41), rgb(119, 88, 20));
+}
 
-    position: absolute;
-    top: 23%;
-    left: 6.5%;
-  }
- 
-   #login1{
-display: none;
-    position: absolute;
-    z-index: -9999999999999999999999999999999;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    border-radius: 20px;
-    width: 86%;
-    height: 70%;
-    left: 7%;
-    top: 7%;
+#used {
+
+  position: absolute;
+  top: 23%;
+  left: 6.5%;
+}
+
+#login1 {
+  display: none;
+  position: absolute;
+  z-index: -9999999999999999999999999999999;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 20px;
+  width: 86%;
+  height: 70%;
+  left: 7%;
+  top: 7%;
   background-color: grey;
   opacity: 0.2;
-   }
+}
 
-   #loginbtn{
-   box-shadow: 2px 2px 2px black;
-    position: absolute;
-    left:20%;
-    top: 9%;
-    background-image: linear-gradient(-20deg, #65327d 0%, #7b378f 100%);
-    border-radius: 10px;
-    font-size: 26px;
-    padding: 2%;
-    color: white;
-   }
+#loginbtn {
+  box-shadow: 2px 2px 2px black;
+  position: absolute;
+  left: 20%;
+  top: 9%;
+  background-image: linear-gradient(-20deg, #65327d 0%, #7b378f 100%);
+  border-radius: 10px;
+  font-size: 26px;
+  padding: 2%;
+  color: white;
+}
 
-   
-   .login-box {
-    display: none;
-/* display: none; */
-       font-family: Arial, sans-serif;
-       /* background-image: url('https://images.pexels.com/photos/7130475/pexels-photo-7130475.jpeg'); */
-       /* background-size: cover; */
-     width: 70%;
-     height: 78%;
-     position: absolute;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     /* background: #222; */
-     padding: 40px;
-     border-radius: 5px;
-     /* box-shadow: 0 0 10px #000; */
-   }
-   
-   .login-box h1 {
-     color: #fff;
-     text-align: center;
-     font-size: 24px;
-     margin-top: 0;
-   }
-   
-   .login-box p {
-    
-     margin: 0;
-     padding: 0;
-     font-weight: bold;
-     color: #fff;
-   }
-   
-   .login-box input {
-     width: 100%;
-     margin-bottom: 20px;
-   }
-   
-   .login-box input[type="text"],
-   .login-box input[type="password"] {
-     border: none;
-     border-bottom: 1px solid #fff;
-     background: transparent;
-     outline: none;
-     height: 40px;
-     color: #fff;
-     font-size: 16px;
-   }
-   
-   .login-box input[type="submit"] {
-     border: none;
-     outline: none;
-     height: 40px;
-     background: #fb2525;
-     color: #fff;
-     font-size: 18px;
-     border-radius: 20px;
-   }
-   
-   .login-box input[type="submit"]:hover {
-     cursor: pointer;
-     background: #ffc107;
-     color: #000;
-   }
-   
-   .login-box a {
-     color: #fff;
-     font-size: 14px;
-     font-weight: bold;
-     text-decoration: none;
-   }
-   
-   .login-box a:hover {
-     text-decoration: underline;
-   }
-   
-   .avatar {
-     width: 100px;
-     height: 100px;
-     border-radius: 50%;
-     position: absolute;
-     top: -50px;
-     left: calc(50% - 50px);
-   }
-   
-   .invit-only {
-     margin: 0px 0;
-     color: #fff;
-     font-size: 14px;
-   }
-   
-   .invit-only label {
-     display: flex;
-     align-items: center;
-   }
-   
-   .invit-only label input[type="checkbox"] {
-     margin-right: 1px;
-   }
-   .referral-code {
-     color: white;
-   }
+.login-box {
+  display: none;
+  /* display: none; */
+  font-family: Arial, sans-serif;
+  /* background-image: url('https://images.pexels.com/photos/7130475/pexels-photo-7130475.jpeg'); */
+  /* background-size: cover; */
+  width: 70%;
+  height: 78%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* background: #222; */
+  padding: 40px;
+  border-radius: 5px;
+  /* box-shadow: 0 0 10px #000; */
+}
 
-   #myChart{
+.login-box h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  margin-top: 0;
+}
 
+.login-box p {
 
-   position: absolute;
-   }
-   #dayc{
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  color: #fff;
+}
 
-    position: absolute;
-    color: white;
-    margin: auto;
-    padding: auto;
- left: 0;
- right: 0;
- text-align: center;
-top: 55%;
-   }
+.login-box input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.login-box input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #fb2525;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+.login-box input[type="submit"]:hover {
+  cursor: pointer;
+  background: #ffc107;
+  color: #000;
+}
+
+.login-box a {
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-box a:hover {
+  text-decoration: underline;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+
+.invit-only {
+  margin: 0px 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+.invit-only label {
+  display: flex;
+  align-items: center;
+}
+
+.invit-only label input[type="checkbox"] {
+  margin-right: 1px;
+}
+
+.referral-code {
+  color: white;
+}
+
+#myChart {
 
 
-   #bance2{
+  position: absolute;
+}
 
-    font-size: 50px;
-    position: absolute;
-    color: white;
-    background-color: #212121;
-    top:15%;
-left: 19%;
-padding: 3% 15%;
-border-radius: 20px;
+#dayc {
 
-left: 0; 
-right: 0; 
-margin-left: auto; 
-margin-right: auto; 
-width: 150px;
-   }
+  position: absolute;
+  color: white;
+  margin: auto;
+  padding: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 55%;
+}
 
-   #bance1{
-color: white;
-    position: absolute;
-    left: 17%;
-    top: 9%;
-   }
+#bance2 {
 
-   #bance3{
+  font-size: 50px;
+  position: absolute;
+  color: white;
+  background-color: #212121;
+  top: 15%;
+  left: 19%;
+  padding: 3% 15%;
+  border-radius: 20px;
 
-    position: absolute;
-    color: white;
-    top: 27%;
-    left: 4%;
-   }
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+}
 
-   #ba4{
+#bance1 {
+  color: white;
+  position: absolute;
+  left: 17%;
+  top: 9%;
+}
 
-    position: absolute;
-    width: 15%;
-    top: 37%;
-    left: 25%;
-   }
+#bance3 {
 
-   #ba5{
+  position: absolute;
+  color: white;
+  top: 27%;
+  left: 4%;
+}
 
-    position: absolute;
-    width: 16%;
-    top: 36.8%;
-    left: 58%;
-   }
+#ba4 {
 
-   #submitn{
-    position: absolute;
-    border: none;
-    outline: none;
-    height: 40px;
-    background: #fb2525;
-    color: #fff;
-    font-size: 18px;
-    border-radius: 20px;
-    left: 20%;
-    width: 60%;
-    top: 67%;
-   }
-   
-   #limitweek{
+  position: absolute;
+  width: 15%;
+  top: 37%;
+  left: 25%;
+}
 
-    display: none;
-   }
+#ba5 {
+
+  position: absolute;
+  width: 16%;
+  top: 36.8%;
+  left: 58%;
+}
+
+#submitn {
+  position: absolute;
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #fb2525;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+  left: 20%;
+  width: 60%;
+  top: 67%;
+}
+
+#limitweek {
+
+  display: none;
+}
+
+#whyspent {
+
+  position: absolute;
+  top: 5%;
+  left: 7%;
+  width: 83%;
+  height: 6%;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px black;
+  font-size: 20px;
+}
+
+#whyspent1 {
+
+  position: absolute;
+  top: 50%;
+  left: 7%;
+  width: 83%;
+  height: 6%;
+  border-radius: 10px;
+  background-color: #ffbdbd;
+  box-shadow: 3px 3px 3px black;
+  font-size: 20px;
+  color: rgb(24, 23, 23);
+ 
+}
+#amount {
+
+  position: absolute;
+  top: 15%;
+  left: 30%;
+  width: 40%;
+  height: 6%;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px black;
+  font-size: 20px;
+}
+
+#amount1 {
+  background-color: #ffbdbd;
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  width: 40%;
+  height: 6%;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px black;
+  font-size: 20px;
+}
+#submitamt {
+
+  position: absolute;
+  width: 80%;
+  top: 27%;
+  height: 6%;
+  left: 11%;
+  border-radius: 20px;
+  background: #a3a328;
+  color: #fff;
+  font-size: 20px;
+}
+
+#submitamt1 {
+
+  position: absolute;
+  width: 80%;
+  top: 70%;
+  height: 6%;
+  left: 11%;
+  border-radius: 20px;
+  background: #ff0000;
+  color: #ffffff;
+  font-size: 20px;
+}
 
 
-   #whyspent{
 
-    position: absolute;
-    top: 5%;
-    left: 7%;
-    width: 83%;
-    height: 6%;
-    border-radius: 10px;
-    box-shadow: 3px 3px 3px black;
-    font-size: 20px;
-   }
-
-   #amount{
-
-    position: absolute;
-    top: 15%;
-    left: 30%;
-    width: 40%;
-    height: 6%;
-    border-radius: 10px;
-    box-shadow: 3px 3px 3px black;
-    font-size: 20px;
-   }
-
-   #submitamt{
-
-    position: absolute;
-    width: 80%;
-    top: 30%;
-    height: 6%;
-    left: 11%;
-    border-radius: 20px;
-    background: #a3a328;
-    color: #fff;
-    font-size: 20px;
-   }
-
-
-#historywall{
-overflow-x: hidden;
+#historywall {
+  overflow-x: hidden;
   position: absolute;
   width: 80%;
   height: 38%;
@@ -520,120 +555,126 @@ overflow-x: hidden;
 
 }
 
-#h1{
+#h1 {
 
   color: white;
-  margin-left:30%;
+  margin-left: 30%;
 }
-#h2{
+
+#h2 {
   margin-left: 100%;
   color: rgb(255, 99, 99);
 }
 
-#avatar{
-position: absolute;
+#avatar {
+  position: absolute;
 
   width: 40%;
- 
-  left: 0; 
-right: 0; 
-margin-left: auto; 
-margin-right: auto; 
-width: 35%;
-top: 6%;
+
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35%;
+  top: 6%;
 }
 
-#name{
+#name {
 
   position: absolute;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   color: white;
   text-align: center;
   top: 22%;
 }
 
-#usernamee{
-font-size: 17px;
+#usernamee {
+  font-size: 17px;
   position: absolute;
-  left: 0; 
-  right: 0; 
-  margin-left: auto; 
-  margin-right: auto; 
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
   color: white;
   text-align: center;
   top: 27.4%;
   opacity: 0.5;
 }
 
-#weeklylim{
+#weeklylim {
 
   color: white;
   position: absolute;
   top: 38%;
   background-color: #64924d;
   padding: 3% 6%;
-  left:60%;
+  left: 60%;
   font-size: 30px;
   border-radius: 10px;
 }
 
-#weeklylim2{
+#weeklylim2 {
 
   color: white;
   position: absolute;
   top: 23%;
   background-color: #64924d;
   padding: 3% 9%;
-  left:10%;
+  left: 10%;
   font-size: 30px;
   border-radius: 10px;
 }
-#mirr1{
+
+#mirr1 {
 
   display: none;
 }
-#moneyrem{
+
+#moneyrem {
 
   color: white;
   position: absolute;
   top: 38%;
   background-color: #d42a13;
   padding: 3% 9%;
-  left:10%;
+  left: 10%;
   border-radius: 10px;
   font-size: 30px;
 }
-#dayrem{
+
+#dayrem {
 
   color: white;
   position: absolute;
   top: 52.5%;
   background-color: #b27110;
   padding: 3% 7%;
-  left:10%;
+  left: 10%;
   border-radius: 10px;
   font-size: 30px;
 }
-#dc{
+
+#dc {
 
   color: rgb(239, 30, 30);
   position: absolute;
-left: 0;
-  right: 0; 
-margin-left: auto; 
-margin-right: auto; 
-text-align: center;
-top: 40%;
-display: none;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  top: 35.5%;
+  display: none;
 
 }
-#resetbtn{
 
-position: absolute;
-background-color: rgb(232, 40, 40);
+#resetbtn {
+
+  position: absolute;
+  background-color: rgb(232, 40, 40);
   width: 37%;
   top: 42.5%;
   height: 6%;
@@ -643,64 +684,64 @@ background-color: rgb(232, 40, 40);
   font-size: 20px;
 }
 
-#resetbtn1{
+#resetbtn1 {
 
   position: absolute;
   background-color: rgb(232, 40, 40);
-    width: 37%;
-    top: 57.5%;
-    height: 6%;
-    left: 55%;
-    border-radius: 20px;
-    color: white;
-    font-size: 20px;
-  }
-  
+  width: 37%;
+  top: 57.5%;
+  height: 6%;
+  left: 55%;
+  border-radius: 20px;
+  color: white;
+  font-size: 20px;
+}
 
-#moneyrem2{
+#moneyrem2 {
 
   color: white;
   position: absolute;
   top: 38%;
   background-color: #d42a13;
   padding: 3% 6%;
-  left:10%;
+  left: 10%;
   border-radius: 10px;
   font-size: 30px;
 }
 
-#mr1{
+#mr1 {
   position: absolute;
   color: white;
   top: 35%;
   left: 10.5%;
 }
-#wl1{
+
+#wl1 {
   position: absolute;
   color: white;
   top: 35%;
   left: 58%;
 }
 
-
-#myChart{
-position: absolute;
- width: 50%;
+#myChart {
+  position: absolute;
+  width: 50%;
 }
 
-#sett{
+#sett {
 
   width: 12%;
   position: absolute;
   left: 84%;
   top: 2%;
 }
-#setting{
+
+#setting {
 
   position: absolute;
   width: 100%;
   height: 100%;
- 
+
   z-index: 9999999999999999999;
   left: 0%;
   top: 0%;
@@ -709,26 +750,26 @@ position: absolute;
   background-attachment: fixed;
 }
 
-#homee{
+#homee {
 
   position: absolute;
-  width:12%;
+  width: 12%;
   left: 80%;
   top: 3.5%;
 }
 
-#searchsett{
+#searchsett {
 
   position: absolute;
   width: 65%;
   height: 6%;
-border-radius: 20px;
-font-size: 20px;
-top: 3.8%;
-left: 4.5%;
+  border-radius: 20px;
+  font-size: 20px;
+  top: 3.8%;
+  left: 4.5%;
 }
 
-#searchh{
+#searchh {
 
   position: absolute;
   z-index: 9999999;
@@ -737,7 +778,7 @@ left: 4.5%;
   top: 5%;
 }
 
-#mirror{
+#mirror {
 
   position: absolute;
   top: 15%;
@@ -749,7 +790,7 @@ left: 4.5%;
   opacity: 0.4;
 }
 
-#mirror1{
+#mirror1 {
 
   position: absolute;
   top: 26%;
@@ -761,7 +802,7 @@ left: 4.5%;
   opacity: 0.4;
 }
 
-#mirror2{
+#mirror2 {
 
   position: absolute;
   top: 37%;
@@ -773,7 +814,7 @@ left: 4.5%;
   opacity: 0.4;
 }
 
-#mirror3{
+#mirror3 {
 
   position: absolute;
   top: 48%;
@@ -785,7 +826,7 @@ left: 4.5%;
   opacity: 0.4;
 }
 
-#mirror4{
+#mirror4 {
 
   position: absolute;
   top: 59%;
@@ -796,7 +837,8 @@ left: 4.5%;
   border-radius: 10px;
   opacity: 0.4;
 }
-#mirror5{
+
+#mirror5 {
 
   position: absolute;
   top: 70%;
@@ -808,57 +850,55 @@ left: 4.5%;
   opacity: 0.4;
 }
 
-#wlwl{
+#wlwl {
 
   color: white;
   top: 14.6%;
   position: absolute;
-left: 9%;
+  left: 9%;
 }
 
-#wlwl1{
+#wlwl1 {
 
   color: white;
   top: 25.6%;
   position: absolute;
-left: 9%;
+  left: 9%;
 }
 
-#wlwl2{
+#wlwl2 {
 
   color: white;
   top: 36.6%;
   position: absolute;
-left: 9%;
+  left: 9%;
 }
 
-#wlwl3{
+#wlwl3 {
 
   color: white;
   top: 47.6%;
   position: absolute;
-left: 9%;
+  left: 9%;
 }
 
-#wlwl4{
+#wlwl4 {
 
   color: white;
   top: 58.6%;
   position: absolute;
-left: 9%;
+  left: 9%;
 }
 
-
-#wlwl5{
+#wlwl5 {
 
   color: white;
   top: 69.6%;
   position: absolute;
-left: 9%;
+  left: 9%;
 }
 
-
-#nextpng{
+#nextpng {
 
   position: absolute;
   top: 17.8%;
@@ -866,7 +906,7 @@ left: 9%;
   left: 85%;
 }
 
-#nextpng1{
+#nextpng1 {
 
   position: absolute;
   top: 28.8%;
@@ -874,7 +914,7 @@ left: 9%;
   left: 85%;
 }
 
-#nextpng22{
+#nextpng22 {
 
   position: absolute;
   top: 28.8%;
@@ -882,8 +922,7 @@ left: 9%;
   left: 85%;
 }
 
-
-#nextpng11{
+#nextpng11 {
 
   position: absolute;
   top: 17.8%;
@@ -891,11 +930,7 @@ left: 9%;
   left: 85%;
 }
 
-
-
-
-
-#nextpng2{
+#nextpng2 {
 
   position: absolute;
   top: 39.8%;
@@ -903,7 +938,7 @@ left: 9%;
   left: 85%;
 }
 
-#nextpng33{
+#nextpng33 {
 
   position: absolute;
   top: 39.8%;
@@ -911,7 +946,7 @@ left: 9%;
   left: 85%;
 }
 
-#nextpng3{
+#nextpng3 {
 
   position: absolute;
   top: 50.8%;
@@ -919,15 +954,15 @@ left: 9%;
   left: 85%;
 }
 
-
-#nextpng44{
+#nextpng44 {
 
   position: absolute;
   top: 50.8%;
   width: 7%;
   left: 85%;
 }
-#nextpng4{
+
+#nextpng4 {
 
   position: absolute;
   top: 61.8%;
@@ -935,8 +970,7 @@ left: 9%;
   left: 85%;
 }
 
-
-#nextpng55{
+#nextpng55 {
 
   position: absolute;
   top: 61.8%;
@@ -944,7 +978,7 @@ left: 9%;
   left: 85%;
 }
 
-#nextpng5{
+#nextpng5 {
 
   position: absolute;
   top: 72.8%;
@@ -952,8 +986,7 @@ left: 9%;
   left: 85%;
 }
 
-
-#nextpng66{
+#nextpng66 {
 
   position: absolute;
   top: 72.8%;
@@ -961,67 +994,70 @@ left: 9%;
   left: 85%;
 }
 
-.rot{
+.rot {
 
-transform: rotate(90deg);
-display: none;
+  transform: rotate(90deg);
+  display: none;
 }
 
-#setting{
+#setting {
 
   display: none;
 }
 
-#walletbackground{
+#walletbackground {
   color: white;
 }
 
-#historyt{
+#historyt {
 
   position: absolute;
   top: 16%;
   left: 12%;
 }
-#historyt2{
-left: 66%;
+
+#historyt2 {
+  left: 66%;
 
   position: absolute;
   top: 16.3%;
   color: red;
- 
+
 }
-#recentt{
-color: rgb(24, 166, 24);
+
+#recentt {
+  color: rgb(24, 166, 24);
   left: 18%;
   top: 2%;
   position: absolute;
 }
-#backk{
+
+#backk {
 
   border-radius: 20px;
-width: 80%;
-height: 43%;
-position: absolute;
-left: 10%;
-top: 34%;
+  width: 80%;
+  height: 43%;
+  position: absolute;
+  left: 10%;
+  top: 34%;
   background-color: #272428;
 }
 
-#used{
+#used {
 
-left: 7%;
-font-size: 20px;
+  left: 7%;
+  font-size: 20px;
 }
 
-
-#bmc1{
+#bmc1 {
 
   position: absolute;
+  
   top: 87%;
   left: 13%;
 }
 
-#avatarc{
+#avatarc {
 
   position: absolute;
   color: white;
@@ -1035,8 +1071,7 @@ font-size: 20px;
   left: 48%
 }
 
-
-#avatarcccc{
+#avatarcccc {
 
   position: absolute;
   color: white;
@@ -1050,8 +1085,7 @@ font-size: 20px;
   left: 49%
 }
 
-
-#avatarcc{
+#avatarcc {
 
   position: absolute;
   width: 30%;
@@ -1060,7 +1094,7 @@ font-size: 20px;
   z-index: 9999999999;
 }
 
-#avatarccc{
+#avatarccc {
 
   position: absolute;
   width: 32%;
@@ -1068,7 +1102,69 @@ font-size: 20px;
   left: 12%;
   z-index: 9999;
 }
-#mirr2{
+
+#mirr2 {
 
   display: none;
 }
+
+#okk{
+position: absolute;
+width: 13%;
+top: 54.5%;
+z-index: 99999;
+left: 78%;
+}
+
+#namec{
+
+  position: absolute;
+  width: 63%;
+  height: 5%;
+  top: 55%;
+  z-index: 9999;
+  left: 7%;
+  font-size: 20px;
+}
+
+#profc{
+
+  position: absolute;
+  width: 63%;
+  height: 5%;
+  top: 65%;
+  z-index: 9999;
+  left: 7%;
+  font-size: 20px;
+}
+
+#okk1{
+  position: absolute;
+  width: 13%;
+  top: 64.5%;
+  z-index: 99999;
+  left: 78%;
+  }
+
+  #userc{
+
+    position: absolute;
+    width: 63%;
+    height: 5%;
+    top: 75%;
+    z-index: 9999;
+    left: 7%;
+    font-size: 20px;
+  }
+  
+  #okk2{
+    position: absolute;
+    width: 13%;
+    top: 74.5%;
+    z-index: 99999;
+    left: 78%;
+    }
+
+
+
+  

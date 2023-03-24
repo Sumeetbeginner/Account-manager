@@ -1,223 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>  
-</head> <link rel="stylesheet" href="index.css">
+  <title>Document</title>
+</head>
+<link rel="stylesheet" href="index.css">
+
 <body onclick="dataput()" onload="login()">
-  
-<script src="https://kit.fontawesome.com/a79f83ae93.js" crossorigin="anonymous"></script>
 
-<body id="body"></body>
-<div id="container">
-  <div id="activated"></div>
-  <div class="all-icons">
+  <script src="https://kit.fontawesome.com/a79f83ae93.js" crossorigin="anonymous"></script>
 
-    <div onclick="changec1()"   id="icon-1">
-      <i id="img" class="fa-solid fa-house"></i>
+  <body id="body"></body>
+  <div id="container">
+    <div id="activated"></div>
+    <div class="all-icons">
+
+      <div onclick="changec1()" id="icon-1">
+        <i id="img" class="fa-solid fa-house"></i>
+      </div>
+
+      <div id="icon-2">
+        <img src="group.png" alt="" id="addnew">
+      </div>
+
+      <div id="icon-3">
+        <img src="plus.png" alt="" id="addnew">
+      </div>
+
+      <div id="icon-4">
+        <img src="graph.png" alt="" id="analytics">
+      </div>
+
+      <div id="icon-5">
+        <img src="wallet-filled-money-tool.png" alt="" id="wallet">
+      </div>
+
     </div>
-
-    <div id="icon-2">
-      <img src="group.png" alt="" id="addnew">
-    </div>
-
-    <div id="icon-3">
-      <img src="plus.png" alt="" id="addnew">
-    </div>
-
-    <div id="icon-4">
-      <img src="graph.png" alt="" id="analytics">
-    </div>
-
-    <div id="icon-5">
-     <img src="wallet-filled-money-tool.png" alt="" id="wallet">
-    </div>
-
-  </div>
-</div>
-
-<div id="setting">
-
-<img onclick="homie()" src="home.png" alt="" id="homee">
-
-<input placeholder="Search Setting" id="searchsett"> 
-
-<img src="search.png" alt="" id="searchh">
-
-<div id="mirror">
- 
-</div>
-
-<div id="mirr1">
-  <!-- <h3 id="wl2">Weekly Limit</h3> -->
-<h2 id="weeklylim2"></h2>
-  <img onclick="plus()" src="https://cdn-icons-png.flaticon.com/512/4315/4315609.png" alt="" id="bal4">
-  <img onclick="minus()" src="https://cdn-icons-png.flaticon.com/512/2569/2569198.png" alt="" id="bal5">
-
-  <h3 id="mr1">Money Left</h3>
-  <h2 id="moneyrem"></h2>
-
-<button onclick="reset()" id="resetbtn">Reset</button>
-
-<h2 id="dayrem"></h2>
-
-<button onclick="resetday()" id="resetbtn1">Reset</button>
-
-</div>
-
-<div id="mirr2">
-
-  
-  <img src="" alt="" id="avatarcc">
-
-
-  <button onclick="changeava()" id="avatarc">Change Avatar</button>
-
-
-
-</div>
-<div id="mirror1"></div>
-<div id="mirror2"></div>
-<div id="mirror3"></div>
-<div id="mirror4"></div>
-<div id="mirror5"></div>
-<h2 id="wlwl">Weekly Limit </h2>
-<h2 id="wlwl1">Profile </h2>
-<h2 id="wlwl2">Display </h2>
-<h2 id="wlwl3">Social </h2>
-
-<h2 id="wlwl4">Null </h2>
-
-<h2 id="wlwl5">Null </h2>
-<img src="next.png" onclick="next1()" alt="" id="nextpng">
-<img class="rot" src="next.png" onclick="prev1()" alt="" id="nextpng11">
-<img src="next.png" onclick="next2()" alt="" id="nextpng1">
-<img class="rot" src="next.png" onclick="prev2()" alt="" id="nextpng22">
-<img src="next.png" alt="" onclick="next3()" id="nextpng2">
-<img class="rot" src="next.png" onclick="prev3()" alt="" id="nextpng33">
-<img src="next.png" onclick="next4()" alt="" id="nextpng3">
-<img class="rot" src="next.png" onclick="prev4()" alt="" id="nextpng44">
-<img src="next.png" onclick="next5()" alt="" id="nextpng4">
-<img class="rot" src="next.png" onclick="prev5()" alt="" id="nextpng55">
-
-
-<img src="next.png" onclick="next6()" alt="" id="nextpng5">
-<img class="rot" src="next.png" onclick="prev6()" alt="" id="nextpng66">
-
-
-<div id="bmc1">
-
-  <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" id="bmc" data-slug="sumeetgupta" data-color="#5F7FFF" data-emoji="🍕" data-font="Comic" data-text="Buy me a pizza" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
   </div>
 
+  <div id="setting">
 
-    
+    <img onclick="homie()" src="home.png" alt="" id="homee">
 
-</div>
-<div id="homebackground">
+    <input placeholder="Search Setting" id="searchsett">
 
-  <img onclick="setti()" src="setting (1).png" alt="" id="sett">
- 
-  <img src="" alt="" id="avatar">
+    <img src="search.png" alt="" id="searchh">
+
+    <div id="mirror">
+
+    </div>
+
+    <div id="mirr1">
+      <!-- <h3 id="wl2">Weekly Limit</h3> -->
+      <h2 id="weeklylim2"></h2>
+      <img onclick="plus()" src="https://cdn-icons-png.flaticon.com/512/4315/4315609.png" alt="" id="bal4">
+      <img onclick="minus()" src="https://cdn-icons-png.flaticon.com/512/2569/2569198.png" alt="" id="bal5">
+
+      <h3 id="mr1">Money Left</h3>
+      <h2 id="moneyrem"></h2>
+
+      <button onclick="reset()" id="resetbtn">Reset</button>
+
+      <h2 id="dayrem"></h2>
+
+      <button onclick="resetday()" id="resetbtn1">Reset</button>
+
+    </div>
+
+    <div id="mirr2">
 
 
-<h2 id="name"></h2>
-<h3 id="usernamee"></h3>
+      <img src="" alt="" id="avatarcc">
 
-<h3 id="mr1">Money Left</h3>
-<h2 id="moneyrem2"></h2>
 
-<h3 id="wl1">Weekly Limit</h3>
-<h2 id="weeklylim"></h2>
+      <button onclick="changeava()" id="avatarc">Change Avatar</button>
 
-<!-- <h2 id="balance3">Weekly Limit </h2> -->
-<!-- <img onclick="plus()" src="https://cdn-icons-png.flaticon.com/512/4315/4315609.png" alt="" id="bal4">
+
+<input placeholder="Change Name" type="text" id="namec">
+
+<img src="ok.png" onclick="cn()" alt="" id="okk">
+
+<input placeholder="Change Profession" type="text" id="profc">
+
+<img src="ok.png" onclick="cp()" alt="" id="okk1">
+
+
+<input placeholder="Change Username" type="text" id="userc">
+
+<img src="ok.png" onclick="cp()" alt="" id="okk2">
+
+    </div>
+
+
+    <div id="mirror1"></div>
+    <div id="mirror2"></div>
+    <div id="mirror3"></div>
+    <div id="mirror4"></div>
+    <div id="mirror5"></div>
+    <h2 id="wlwl">Weekly Limit </h2>
+    <h2 id="wlwl1">Profile </h2>
+    <h2 id="wlwl2">Social</h2>
+    <h2 id="wlwl3"> Others</h2>
+
+    <h2 id="wlwl4">Display </h2>
+
+    <h2 id="wlwl5">Premium </h2>
+    <img src="next.png" onclick="next1()" alt="" id="nextpng">
+    <img class="rot" src="next.png" onclick="prev1()" alt="" id="nextpng11">
+    <img src="next.png" onclick="next2()" alt="" id="nextpng1">
+    <img class="rot" src="next.png" onclick="prev2()" alt="" id="nextpng22">
+    <img src="next.png" alt="" onclick="next3()" id="nextpng2">
+    <img class="rot" src="next.png" onclick="prev3()" alt="" id="nextpng33">
+    <img src="next.png" onclick="next4()" alt="" id="nextpng3">
+    <img class="rot" src="next.png" onclick="prev4()" alt="" id="nextpng44">
+    <img src="next.png" onclick="next5()" alt="" id="nextpng4">
+    <img class="rot" src="next.png" onclick="prev5()" alt="" id="nextpng55">
+
+
+    <img src="next.png" onclick="next6()" alt="" id="nextpng5">
+    <img class="rot" src="next.png" onclick="prev6()" alt="" id="nextpng66">
+
+
+    <div id="bmc1">
+
+      <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
+        data-name="bmc-button" id="bmc" data-slug="sumeetgupta" data-color="#5F7FFF" data-emoji="🍕" data-font="Comic"
+        data-text="Buy me a pizza" data-outline-color="#000000" data-font-color="#ffffff"
+        data-coffee-color="#FFDD00"></script>
+    </div>
+
+
+
+
+  </div>
+
+  <div id="homebackground">
+
+    <img onclick="setti()" src="setting (1).png" alt="" id="sett">
+
+    <img src="" alt="" id="avatar">
+
+
+    <h2 id="name"></h2>
+    <h3 id="usernamee"></h3>
+
+    <h3 id="mr1">Money Left</h3>
+    <h2 id="moneyrem2"></h2>
+
+    <h3 id="wl1">Weekly Limit</h3>
+    <h2 id="weeklylim"></h2>
+
+    <!-- <h2 id="balance3">Weekly Limit </h2> -->
+    <!-- <img onclick="plus()" src="https://cdn-icons-png.flaticon.com/512/4315/4315609.png" alt="" id="bal4">
 <img onclick="minus()" src="https://cdn-icons-png.flaticon.com/512/2569/2569198.png" alt="" id="bal5"> -->
 
 
-<h1 id="dayc"></h1>
+    <h1 id="dayc"></h1>
 
-</div>
-
-
-
-<div id="profilebackground">
-
-
-
-
-
-</div>
-
-<div id="plusbackground">
-
-<input placeholder="Where you Spent?" type="text" id="whyspent" required>
-
-<input placeholder="Amount ₹" min="1"  max="10000000000" type="number" id="amount" required>
-
-<button onclick="record()" id="submitamt">Submit</button>
-
-
-<h2 id="dc">Data Recorded ! 😊</h2>
-
-
-
-
-
-
-
-
-
-
-</div>
-
-
-<div onload="dataput()" id="anabackground">
-  <canvas style="position: absolute; top: 10%; height: 90px; width: 90px;" id="myChart"></canvas>
-
-
-</div>
-
-
-<div  id="walletbackground">
-
-  <div id="balance">
-    <h2 id="balance1">Balance </h2>
-
-<h2 id="balance2"></h2>
-<h3 id="used"></h3>
-
-<div id="backk">
-
-  <h3 id="recentt">Recent Transaction</h3>
-<div id="historyt">
-
-<h2 id="his1"></h2>
-<h2 id="his2"></h2>
-<h2 id="his3"></h2>
-<h2 id="his4"></h2>
-<h2 id="his5"></h2>
-
-
-</div>
-
-<div id="historyt2">
-
-  <h2 id="his11"></h2>
-  <h2 id="his22"></h2>
-  <h2 id="his33"></h2>
-  <h2 id="his44"></h2>
-  <h2 id="his55"></h2>
- 
-  
   </div>
 
-</div>
-
-</div>
-
+  <div id="profilebackground">
 
 
 
@@ -225,72 +170,149 @@
 
   </div>
 
+  <div id="plusbackground">
+
+    <input placeholder="Where you Spent?" type="text" id="whyspent" required>
+
+    <input placeholder="Amount ₹" min="1" max="10000000000" type="number" id="amount" required>
+
+    <button onclick="record()" id="submitamt">Submit</button>
 
 
-</div>
+    <h2 id="dc">Data Recorded ! </h2>
 
 
-<div id="login">
 
-  <div id="limitweek">
+
+
+    <input placeholder="Emergency Spent?" type="text" id="whyspent1" required>
+
+    <input placeholder="Amount ₹" min="1" max="10000000000" type="number" id="amount1" required>
+
+    <button onclick="record1()" id="submitamt1">Submit</button>
+
+
+    <h2 id="dc">Data Recorded !</h2>
+
+
+
+
+  </div>
+
+  <div onload="dataput()" id="anabackground">
+    <canvas style="position: absolute; top: 10%; height: 90px; width: 90px;" id="myChart"></canvas>
+
+
+  </div>
+
+  <div id="walletbackground">
+
+    <div id="balance">
+      <h2 id="balance1">Balance </h2>
+
+      <h2 id="balance2"></h2>
+      <h3 id="used"></h3>
+
+      <div id="backk">
+
+        <h3 id="recentt">Recent Transaction</h3>
+        <div id="historyt">
+
+          <h2 id="his1"></h2>
+          <h2 id="his2"></h2>
+          <h2 id="his3"></h2>
+          <h2 id="his4"></h2>
+          <h2 id="his5"></h2>
+
+
+        </div>
+
+        <div id="historyt2">
+
+          <h2 id="his11"></h2>
+          <h2 id="his22"></h2>
+          <h2 id="his33"></h2>
+          <h2 id="his44"></h2>
+          <h2 id="his55"></h2>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+  </div>
+  </div>
+
+  <div id="login">
+
+    <div id="limitweek">
 
 
 
       <h2 id="bance1">Enter Weekly Limit </h2>
-  
-  <h2 id="bance2"></h2>
-  
- 
-  <img onclick="plus()" src="https://cdn-icons-png.flaticon.com/512/4315/4315609.png" alt="" id="ba4">
-  <img onclick="minus()" src="https://cdn-icons-png.flaticon.com/512/2569/2569198.png" alt="" id="ba5">
 
-  
-  <button onclick="changeava()" id="avatarcccc">Change </button>
-
-  <img src="ava1.png" alt="" id="avatarccc">
+      <h2 id="bance2"></h2>
 
 
+      <img onclick="plus()" src="https://cdn-icons-png.flaticon.com/512/4315/4315609.png" alt="" id="ba4">
+      <img onclick="minus()" src="https://cdn-icons-png.flaticon.com/512/2569/2569198.png" alt="" id="ba5">
 
-  <input onclick="submitfinal()" id="submitn" type="submit" value="Submit">
+
+      <button onclick="changeava()" id="avatarcccc">Change </button>
+
+      <img src="ava1.png" alt="" id="avatarccc">
 
 
 
-  </div>
-  
+      <input onclick="submitfinal()" id="submitn" type="submit" value="Submit">
+
+
+
+    </div>
+
 
 
 
     <div id="loginbox" class="login-box">
-   
+
       <h1 id="cre">Create Account</h1>
       <!-- <form> -->
-        <p>Username</p>
-        <input id="user" type="text" name="username" placeholder="Create Username" required>
-        <p>Password</p>
-        <input id="pass" type="password" name="password" placeholder="Create Password" required >
-        <p>Full Name</p>
-        <input id="full" type="text" name="username" placeholder="Enter Name" required >
-        
-        <p>Profession</p>
-        <input id="prof" type="text" name="username" placeholder="Enter Profession" required >
+      <p>Username</p>
+      <input id="user" type="text" name="username" placeholder="Create Username" required>
+      <p>Password</p>
+      <input id="pass" type="password" name="password" placeholder="Create Password" required>
+      <p>Full Name</p>
+      <input id="full" type="text" name="username" placeholder="Enter Name" required>
+
+      <p>Profession</p>
+      <input id="prof" type="text" name="username" placeholder="Enter Profession" required>
 
 
-     
-        <input onclick="submitdata()" type="submit" value="Submit">
-         
+
+      <input onclick="submitdata()" type="submit" value="Submit">
+
       <!-- </form> -->
 
     </div>
-<div id="login1">
+    <div id="login1">
 
-  
-</div>
 
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
 
   <script src="index.js"></script>
 </body>
+
 </html>
